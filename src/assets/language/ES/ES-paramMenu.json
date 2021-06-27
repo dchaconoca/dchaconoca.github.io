@@ -1,0 +1,33 @@
+[
+  {
+    "id": "op1",
+    "enlace": { "link": "#acerca", "titulo": "Sobre mí" },
+    "cuadro": { "nombre": "navbar1", "texto": "Sobre mí",
+                "tamagno": ["width: 55px", "height: 55px"] }
+  },
+  {
+    "id": "op2",
+    "enlace": { "link": "#proyectos", "titulo": "Proyectos" },
+    "cuadro": { "nombre": "navbar2", "texto": "Proyectos",
+                "tamagno": ["width: 60px", "height: 60px"] }
+  },
+  {
+    "id": "op3",
+    "enlace": { "link": "#chez-diana", "titulo": "Chez Diana" },
+    "cuadro": { "nombre": "navbar3", "texto": "Chez Diana",
+                "tamagno": ["width: 48px", "height: 48px"] }
+  },
+  {
+    "id": "op4",
+    "enlace": { "link": "#cv", "titulo": "Currículum" },
+    "cuadro": { "nombre": "navbar4", "texto": "Currículum",
+                "tamagno": ["width: 50px", "height: 50px"] }
+  },
+  {
+    "id": "op5",
+    "enlace": { "link": "#blog", "titulo": "Blog" },
+    "cuadro": { "nombre": "navbar5", "texto": "Blog",
+                "tamagno": ["width: 65px", "height: 65px"] }
+  }
+    
+]
