@@ -1,0 +1,38 @@
+<template>
+  <div class="acerca">
+    <img src="../assets/img/Diana.jpeg" alt="Diana Chacón Ocariz" id="img-diana"> 
+    <div v-html="contenido"/>
+  </div>
+</template>
+
+<script>
+// @ is an alias to /src
+import acercaES from "@/assets/language/ES/ES-acerca.md";
+
+export default {
+  name: 'Inicio',
+  data() {
+    return {
+      // titulo: "Sobre mí",
+      contenido: acercaES
+    }
+  }
+}
+</script>
+
+<style scoped>
+  :root {
+    --azul: #363488;
+    --rojo: #d61011;
+    --amarillo: #e2c200;
+    --verde: #73b829;
+    --gris: #636363;
+  }
+
+  #img-diana {
+    width: 200px;
+    border-radius: 5%;
+    float: right;
+  }
+ 
+</style>

@@ -4,10 +4,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <!-- <link rel="icon" href="<%= BASE_URL %>favicon.ico"> -->
     
     <!-- Iconos -->
     <script src="https://kit.fontawesome.com/d969780632.js" crossorigin="anonymous"></script>
+
+    <!-- Librería animaciones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animaciones.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
@@ -15,6 +22,7 @@
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
+   
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
