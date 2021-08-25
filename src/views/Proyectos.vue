@@ -1,49 +1,35 @@
 <template>
-  <div class="acerca">
-    <PanelInfo :titulo="titulo" class="panel-info" />  
-    <!-- <img src="@assets/img/Diana.jpeg" alt="Diana Chacón Ocariz" id="img-diana">  -->
-    <div class="panel-content">
-      <div v-html="contenido"/>
+  <div class="proyectos">
+    <div v-for="proyecto in proyectos" :key="proyecto.id">
+      <TarjetaArt :articulo="proyecto" class="art-proy" />
     </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import PanelInfo from '@/components/PanelInfo.vue';
-import acercaES from "@/assets/language/ES/ES-acerca.md";
+import TarjetaArt from '@/components/TarjetaArt.vue'
+import paramProy from "@/assets/language/ES/ES-paramProy.json";
 
 export default {
-  name: 'Inicio',
+  name: 'Proyecto',
   components: {
-    PanelInfo
+    TarjetaArt
   },
   data() {
     return {
-      titulo: "Sobre mí",
-      contenido: acercaES
+      proyectos: paramProy
     }
   }
 }
 </script>
 
 <style scoped>
-  .acerca {
+
+  .proyectos {
     display: flex;
-    flex-direction: row;
-    width: 100vw;
-    height: 98vh;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 
-  .panel-info {
-    background-color: --var(rojo);
-    width: 30%;
-    height: 100%;
-  }
-
-  .panel-content {
-    width: 68%;
-    height: 100%;
-  }
- 
 </style>

@@ -1,9 +1,10 @@
 <template>
   <div id="inicio">
     <h1>¡Hola! Soy Diana</h1>
-    <MenuCuadros v-bind:esClaro="false" />
+    <img src="../assets/img/Diana.jpg" alt="Diana Chacón Ocariz" id="img-diana"> 
+    <div v-html="contenido"/>
     <div class="textos">
-      <h2>Analista y desarrolladora de software</h2>
+      <h2>Análisis y desarrollo de software</h2>
       <h3>Python: Django, Flask - SQL - Javascript - HTML/CSS</h3>
     </div>
   </div>
@@ -11,12 +12,14 @@
 
 <script>
 // @ is an alias to /src
-import MenuCuadros from '@/components/MenuCuadros.vue';
+import inicio from "@/assets/language/ES/ES-inicio.md";
 
 export default {
   name: 'Inicio',
-  components: {
-    MenuCuadros
+  data() {
+    return {
+      contenido: inicio
+    }
   }
 }
 </script>
@@ -27,8 +30,8 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 98vh;
+    width: 100%;
+    height: 95vh;
   }
 
   .textos {
@@ -37,14 +40,19 @@ export default {
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+
+   #img-diana {
+    width: 300px;
+    border-radius: 5%;
   }
 </style>

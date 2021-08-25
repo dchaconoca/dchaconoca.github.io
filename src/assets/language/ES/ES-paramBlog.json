@@ -1,0 +1,20 @@
+[
+  {
+    "id": "symbols",
+    "imagen": "Diana.jpg",
+    "txtImg": "Symbols en Javascrip",
+    "enlace": "/blog/",
+    "titulo": "Symbols en Javascrip", 
+    "texto": "Qué son y para qué se usan",
+    "tecnologias": "Javascrip"
+  },
+  {
+    "id": "prototipos",
+    "imagen": "Diana.jpg",
+    "txtImg": "Prototipos en Javascript",
+    "enlace": "/blog/",
+    "titulo": "Prototipos en Javascript", 
+    "texto": "¿Qué significa que Javascript sea un lenguaje orientado a prototipos?",
+    "tecnologias": "Javascrip"
+  }     
+]

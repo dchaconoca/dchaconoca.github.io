@@ -20,13 +20,6 @@
 </script>
   
 <style scoped>
-  :root {
-    --azul: #363488;
-    --rojo: #d61011;
-    --amarillo: #e2c200;
-    --verde: #73b829;
-    --gris: rgb(85, 85, 85);
-  }
 
   p {
     visibility: hidden;

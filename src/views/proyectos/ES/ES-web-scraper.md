@@ -1,0 +1,1 @@
+> *Vivo en un mundo de **cambios** constantes donde saber adaptarse es vital. Por eso **me gusta aprender**, para analizar y **encontrar soluciones a los problemas**. Me gusta ser **motor de ideas**, pero **una idea sin un equipo, no avanza**. Lo que haga, tiene sentido siempre y cuando le sea **útil a alguien** y lo haga sentir bien.*

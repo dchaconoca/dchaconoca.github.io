@@ -5,23 +5,19 @@
   },
   {
     "id": "op1",
-    "enlace": { "link": "Acerca", "texto": "Sobre mí" }
+    "enlace": { "link": "/acerca", "texto": "Sobre mí" }
   },
   {
     "id": "op2",
-    "enlace": { "link": "Proyectos", "texto": "Proyectos" }
+    "enlace": { "link": "/proyectos", "texto": "Proyectos" }
   },
   {
     "id": "op3",
-    "enlace": { "link": "ChezDiana", "texto": "Chez Diana" }
+    "enlace": { "link": "/chez-diana", "texto": "Chez Diana" }
   },
   {
     "id": "op4",
-    "enlace": { "link": "CV", "texto": "Currículum" }
-  },
-  {
-    "id": "op5",
-    "enlace": { "link": "Blog", "texto": "Blog"  }
+    "enlace": { "link": "/blog", "texto": "Blog"  }
   }
     
 ]
