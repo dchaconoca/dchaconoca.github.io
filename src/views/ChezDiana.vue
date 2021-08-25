@@ -1,49 +1,35 @@
 <template>
-  <div class="acerca">
-    <PanelInfo :titulo="titulo" class="panel-info" />  
-    <!-- <img src="@assets/img/Diana.jpeg" alt="Diana Chacón Ocariz" id="img-diana">  -->
-    <div class="panel-content">
-      <div v-html="contenido"/>
-    </div>
+  <div class="chez-diana">
+    <div v-html="contenido"/>
+      <CarruselInfinito class="carrusel" 
+          :imagenes="imagenes" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import PanelInfo from '@/components/PanelInfo.vue';
-import acercaES from "@/assets/language/ES/ES-acerca.md";
+import chezDiana from "@/assets/language/ES/ES-recetario-flask.md";
+import CarruselInfinito from '@/components/CarruselInfinito.vue';
+import imagenes from "@/assets/language/ES/ES-imgCD.json";
 
 export default {
-  name: 'Inicio',
+  name: 'ChezDiana',
   components: {
-    PanelInfo
-  },
+      CarruselInfinito,
+    },
   data() {
     return {
-      titulo: "Sobre mí",
-      contenido: acercaES
+      contenido: chezDiana,
+      imagenes: imagenes,
     }
   }
 }
 </script>
 
 <style scoped>
-  .acerca {
+
+  .carrousel {
     display: flex;
-    flex-direction: row;
-    width: 100vw;
-    height: 98vh;
+    justify-content: center;
   }
 
-  .panel-info {
-    background-color: --var(rojo);
-    width: 30%;
-    height: 100%;
-  }
-
-  .panel-content {
-    width: 68%;
-    height: 100%;
-  }
- 
 </style>

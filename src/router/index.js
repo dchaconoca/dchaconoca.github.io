@@ -2,36 +2,32 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Inicio from '../views/Inicio.vue'
 import Acerca from '../views/Acerca.vue'
 import Proyectos from '../views/Proyectos.vue'
+import DetalleProyectos from '../views/DetalleProyectos.vue'
 import CV from '../views/CV.vue'
 import ChezDiana from '../views/ChezDiana.vue'
 import Blog from '../views/Blog.vue'
-import PanelInfo from '@/components/PanelInfo.vue'
-import Vacio from '@/components/Vacio.vue'
+import DetallePosts from '../views/DetallePosts.vue'
 
 const routes = [
   {
     path: '/',
     name: 'Inicio',
-    components: { 
-      default: Vacio,
-      inicio: Inicio
-    },
+    component: Inicio
   },
   {
     path: '/acerca',
     name: 'Acerca',
-    components: { 
-      default: Acerca,
-      panel: PanelInfo
-    },
-    props: {
-      panel: true
-    }
+    component: Acerca
   },
   {
     path: '/proyectos',
     name: 'Proyectos',
     component: Proyectos
+  },
+  {
+    path: '/proyectos/:id',
+    name: 'DetalleProyectos',
+    component: DetalleProyectos
   },
   {
     path: '/cv',
@@ -47,6 +43,11 @@ const routes = [
     path: '/blog',
     name: 'Blog',
     component: Blog
+  },
+  {
+    path: '/blog/:id',
+    name: 'DetallePosts',
+    component: DetallePosts
   }
 ]
 

@@ -1,9 +1,9 @@
 <template>
   <div class="menu-cuadros">
     <div v-for="opcion in opciones" :key="opcion.id" :id="opcion.id" class="cuadro" >
-      <a :href="opcion.enlace.link">
+      <router-link :to="opcion.enlace.link">
         <p v-bind:class="[esClaro ? 'texto-claro' : 'texto-oscuro']">{{ opcion.enlace.texto }}</p>
-      </a>
+      </router-link>
     </div>
   </div>
 </template>
@@ -19,13 +19,14 @@
       }
     },
     props: {
-        // menu: String,
         esClaro: Boolean,
     },
   }
 </script>
 
 <style scoped>
+
+  @import "/assets/css/animaciones.css";
 
   :root {
     --azul: #363488;
@@ -37,7 +38,7 @@
 
   .menu-cuadros {
     display: grid;
-    grid-template-columns: [x0] 1fr [x1] 1fr [x2] 1fr [x3] 1fr [x4] 1fr [x5] 1fr [x6] 1fr [x7] 1fr [x8] 1fr [x9] 1fr [x10] 1fr [x11] 1fr [x12];
+    grid-template-columns: [x0] 1fr [x1] 1fr [x2] 1fr [x3] 1fr [x4] 1fr [x5] 1fr [x6] 1fr [x7] 1fr [x8] 1fr [x9] 1fr [x10];
     grid-template-rows:  [y0] 1fr [y1] 1fr [y2] 1fr [y3] 1fr [y4] 1fr [y5] 1fr [y6] 1fr [y7];
   }
 
@@ -61,7 +62,7 @@
   }
 
   .cuadro:hover {
-    visibility: hidden;
+    visibility: hidden; 
     animation-play-state: paused;
   }
 
@@ -71,16 +72,16 @@
   }
 
   #op0 {
-    grid-column: x1 / x3;
+    grid-column: x4 / x6;
     grid-row: y2 / y4;
-    width: 55px;
-    height: 55px;
+    width: 45px;
+    height: 45px;
     background-color: white;
     animation: moverseOp0 1s ease infinite alternate both running;
   }
 
   #op1 {
-    grid-column: x4 / x6;
+    grid-column: x2 / x4;
     grid-row: y0 / y2;
     width: 50px;
     height: 50px;
@@ -89,39 +90,30 @@
   }
 
   #op2 {
-    grid-column: x3 / x5;
-    grid-row: y4 / y6;
+    grid-column: x1 / x3;
+    grid-row: y5 / y7;
     width: 65px;
     height: 65px;
     background-color: var(--amarillo);
     animation: moverseOp2 1s ease 0.5s infinite alternate both running;
   }
 
-  #op3 {
-    grid-column: x6 / x8;
-    grid-row: y2 / y4;
-    width: 45px;
-    height: 45px;
-    background-color: black;
-    animation: moverseOp3 1s ease 0.2s infinite alternate both running;
-  }
-
-  #op4 {
-    grid-column: x8 / x10;
-    grid-row: y4 / y6;
+  #op3{
+    grid-column: x5 / x7;
+    grid-row: y5 / y7;
     width: 50px;
     height: 50px;
     background-color: var(--verde);
-    animation: moverseOp4 1s ease 0.4s infinite alternate both running;
+    animation: moverseOp3 1s ease 0.4s infinite alternate both running;
   }
 
-  #op5 {
-    grid-column: x9 / x11;
+  #op4 {
+    grid-column: x7 / x9;
     grid-row: y1 / y3;
     width: 60px;
     height: 60px;
     background-color: var(--azul);
-    animation: moverseOp5 1s ease 0.1s infinite alternate both running;
+    animation: moverseOp4 1s ease 0.1s infinite alternate both running;
   }
   
   #op0:hover,

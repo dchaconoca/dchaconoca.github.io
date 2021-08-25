@@ -1,16 +1,20 @@
 <template>
   <div class="app">
     <div class="contenedor">
-      <!-- route outlet -->
-      <!-- component matched by the route will render here -->
-      <router-view class="vista inicio" name="inicio"></router-view>
-      <div class="secciones">
-          <router-view class="vista panel-info" name="panel"></router-view>
-          <router-view class="vista contenido" ></router-view>
+      <div class="info">
+        <PanelInfo :titulo="titulo" class="panel-info" />
       </div>
-      <footer class="footer">
-        <p>Diana Chacón Ocariz - 2021</p>
-      </footer>
+      <div class="contenido">
+        <!-- route outlet -->
+        <!-- component matched by the route will render here -->
+        <router-view v-slot="{ Component }">
+          <transition mode="out-in"
+                    enter-active-class="animate__animated animate__fadeIn"
+                    leave-active-class="animate__animated animate__fadeOut">
+            <component :is="Component" />
+          </transition>
+        </router-view>
+      </div>      
     </div>
   </div>
 </template>
@@ -18,12 +22,18 @@
 <script>
 // @ is an alias to /src
 // import TransicionPagina from '@/components/TransicionPagina.vue';
+import PanelInfo from '@/components/PanelInfo.vue'
 
 export default {
   name: 'app',
-  // components: {
-  //   TransicionPagina
-  // }
+  components: {
+    PanelInfo
+  },
+  data() {
+    return {
+      titulo: "Diana Chacón Ocariz",
+    }
+  }
 }
 </script>
 
@@ -35,6 +45,7 @@ export default {
     --amarillo: #e2c200;
     --verde: #73b829;
     --gris: #636363;
+    --gris-claro: #80808a;
   }
 
   .app {
@@ -43,8 +54,6 @@ export default {
     margin: 0; 
     padding: 0; 
     border: 0;
-    /* width: 100vw;
-    height: 100vh; */
     overflow: hidden;
   }
 
@@ -54,55 +63,27 @@ export default {
   }
 
   .contenedor {
-    display: grid;
-    grid-template-areas: "inicio"
-                          "secciones"
-                          "footer";
-    width: 100vw;
-    height: 100vh;
+    position: relative;
+    display: inline;
+    margin: 0; 
+    padding: 0; 
+    border: 0;
   }
 
-  /* .inicio {
-    width: 100vw;
-    height: 90vh;
-    overflow: hidden;
-  } */
-
-  .secciones {
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between; */
-    display: grid;
-    grid-template-columns: [x0] 30% [x1] 70% [x2];
-    /* grid-template-rows: [y0] 100% [x1] 70% [x2]; */
-    /* overflow: hidden;
-    width: 100vw; */
-  }
-
-  .panel-info {
-    background-color: var(--rojo);
-    /* width: 500px; */
-    grid-column: x0 / x1;
-    /* position: absolute;
-    top: 0;
-    left: 0; */
+  .info {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 30%;
+    z-index: 10;
   }
 
   .contenido {
-    grid-column: x1 / x2;
-    /* height: 100vh;
-    width: 68%; */
+    position: relative;
+    left: 30%;
+    width: 68%;
     overflow-y: auto;
     margin: 2%;
   }
-
-  .sec-inicio {
-    background-color: var(--rojo);
-  }
-
-  .footer {
-    text-align: center;
-  }
-
 
 </style>

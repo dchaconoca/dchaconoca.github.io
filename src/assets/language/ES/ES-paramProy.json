@@ -1,0 +1,56 @@
+[
+  {
+    "id": "gestion-receta",
+    "imagen": "Diana.jpg",
+    "txtImg": "Recetas de cocina",
+    "enlace": "/proyectos/",
+    "titulo": "Gestión receta de cocina", 
+    "texto": "CRUD de recetas de cocina y cálculo de su costo",
+    "tecnologias": "Python: Flask, SQLAlchemy - MySQL"
+  },
+  {
+    "id": "website-vue",
+    "imagen": "logo.png",
+    "txtImg": "Portafolio Diana con VueJS",
+    "enlace": "/proyectos/",
+    "titulo": "Web site en VueJS", 
+    "texto": "Mi web site personal con VueJS",
+    "tecnologias": "Javascript: VueJS - HTML/CSS"
+  },
+  {
+    "id": "web-scraper",
+    "imagen": "logo.png",
+    "txtImg": "Web scraper con Python",
+    "enlace": "/proyectos/",
+    "titulo": "Web scraper con Python", 
+    "texto": "Web scraper de una página de precios de alimentos y generación de JSON",
+    "tecnologias": "Python: Beautifulsoup"
+  },
+  {
+    "id": "orm-sql",
+    "imagen": "Diana.jpg",
+    "txtImg": "Uso ORM SQLAlchemy",
+    "enlace": "/proyectos/",
+    "titulo": "SQLAlchemy y SQL", 
+    "texto": "Carga de datos en base SQLite usando SQLAlchemy. Consultas SQL",
+    "tecnologias": "Python: SQLAlchemy - SQLite - SQL"
+  },
+  {
+    "id": "bamac",
+    "imagen": "Diana.jpg",
+    "txtImg": "PSA Peugeot-Citröen",
+    "enlace": "/proyectos/",
+    "titulo": "Base de Datos Marketing Clientes", 
+    "texto": "Experiencia profesional en PSA Peugeot-Citröen",
+    "tecnologias": "Oracle - C"
+  },
+  {
+    "id": "manapro",
+    "imagen": "Diana.jpg",
+    "txtImg": "Manapro Consultores C.A.",
+    "enlace": "/proyectos/",
+    "titulo": "Concepción y desarrollo de componentes estándares", 
+    "texto": "Experiencia profesional en Manapro Consultores C.A.",
+    "tecnologias": "Visual Basic - SQL Server"
+  }     
+]
