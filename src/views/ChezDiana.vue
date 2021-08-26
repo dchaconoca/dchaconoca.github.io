@@ -9,7 +9,7 @@
 <script>
 import chezDiana from "@/assets/language/ES/ES-recetario-flask.md";
 import CarruselInfinito from '@/components/CarruselInfinito.vue';
-import imagenes from "@/assets/language/ES/ES-imgCD.json";
+import imagenes from "@/assets/config/ES/ES-imgCD.json";
 
 export default {
   name: 'ChezDiana',

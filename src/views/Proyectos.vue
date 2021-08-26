@@ -8,7 +8,7 @@
 
 <script>
 import TarjetaArt from '@/components/TarjetaArt.vue'
-import paramProy from "@/assets/language/ES/ES-paramProy.json";
+import paramProy from "@/assets/config/ES/ES-paramProy.json";
 
 export default {
   name: 'Proyecto',
@@ -27,9 +27,10 @@ export default {
 
   .proyectos {
     display: flex;
-    flex-direction:row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    width: 95%;
+    justify-content: space-around;
   }
+
 
 </style>

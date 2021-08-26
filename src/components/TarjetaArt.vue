@@ -1,11 +1,15 @@
 <template>
   <router-link :to="articulo.enlace + articulo.id">
     <div :id="articulo.id" class="articulo" >
-      <img id="image" :src="require(`@/assets/img/${articulo.imagen}`)" :alt="articulo.txtImg">
-      <h4 class="titulo">{{ articulo.titulo }}</h4>
-      <p class="texto">{{ articulo.texto }}</p>
-      <br>
-      <p class="tecnos">{{ articulo.tecnologias }}</p>
+      <div class="imagen"> 
+        <img id="imagen" :src="require(`@/assets/img/${articulo.imagen}`)" :alt="articulo.txtImg">
+      </div>
+      <div>
+        <h4 class="titulo">{{ articulo.titulo }}</h4>
+        <p class="texto">{{ articulo.texto }}</p>
+        <br>
+        <p class="tecnos">{{ articulo.tecnologias }}</p>
+      </div>
     </div>
   </router-link>
 </template>
@@ -25,20 +29,23 @@
     width: 300px;
     height: 300px;
     border: 1px solid grey;
-    border-radius: 5%;
+    border-radius: 1%;
     background-color: white;
-    /* box-shadow: 0px 3px 5px rgba(0,0,0,0.16), 0px 5px 10px rgba(0,0,0,0.08); */
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.16), 0px 5px 10px rgba(0,0,0,0.08);
+    margin: 5%;
   }
 
-  #image {
+  #imagen {
     width: 50%;
     height: auto;
   }
 
+  .imagen {
+    text-align: center;
+  }
+
   .articulo:hover {
-    transform: rotate(-5deg);
-    z-index: 10;
-    /* box-shadow: 0 10px 20px rgba(0, 0, 0, .7); */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
   }
 
   .titulo {

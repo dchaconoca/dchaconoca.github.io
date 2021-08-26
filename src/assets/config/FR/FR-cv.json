@@ -1,0 +1,53 @@
+[ {
+    "id": 1,
+    "nombre": "Formation",
+    "items":  [
+        {
+          "id": 1,
+          "agno": "1997 - ",
+          "titulo": "Ingénieur-Maître MIAGE Informatique Appliquée a la Gestion d'Entreprises",
+          "empresa": "Université Paul Sabatier et Université Des Sciences Sociales",
+          "descripcion": "",
+          "ciudad": "Toulouse – France"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Expérience Professionnelle",
+      "items":  [
+        {
+          "id": 1,
+          "agno": "2018 -",
+          "titulo": "Consultante Marketing Digital",
+          "empresa": "Freelance",
+          "descripcion": "Analyse et définition de la stratégie la plus adaptée à chaque client et ses besoins",
+          "ciudad": "La Grita – Venezuela"
+        },
+        {
+          "id": 2,
+          "agno": "2008 - 2017",
+          "titulo": "Propriétaire et Chef Cuisinier ",
+          "empresa": "Restaurant Chez Diana",
+          "descripcion": "organisation d’événements pour les entreprises et les particuliers. Service intégral y personalisé",
+          "ciudad": "La Grita – Venezuela"
+        },
+        {
+          "id": 3,
+          "agno": "2001 - 2007",
+          "titulo": "Chef de Projet Informatique",
+          "empresa": "PSA Peugeot - Citroën",
+          "descripcion": "Base de Données Marketing Client: Oracle, C",
+          "ciudad": "Paris – France"
+        },
+        {
+          "id": 4,
+          "agno": "1998 - 2001",
+          "titulo": "Analyste de Contrôle de Qualité et Standards Informatiques",
+          "empresa": "Manapro Consultores C.A.",
+          "descripcion": "Conception et développement de standards de programmation et développement: VisualBasic, SQL Server",
+          "ciudad": "Caracas – Venezuela"
+        }
+      ]
+    }
+]
