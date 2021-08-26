@@ -1,15 +1,12 @@
 <template>
   <div id="carrusel"  class="carrousel" >
-    <div class="imagen">
+    <div class="imagen-carrusel">
       <FlechaCarrusel
           tipoFlecha="izquierda"
           @click="mostrarPreviaImg"
         />
-      <transition name="fade">
-        <img :src="require(`@/assets/img/${imagenActual.nombreImg}`)"
-            :alt="imagenActual.texto" 
-            class="img-carr">
-      </transition>
+
+      <TarjetaCarrusel :imagen="imagenActual" />
 
       <FlechaCarrusel
           tipoFlecha="derecha"
@@ -27,12 +24,15 @@
 </template>
 
 <script>
+  import TarjetaCarrusel from '@/components/TarjetaCarrusel.vue'; 
   import FlechaCarrusel from '@/components/FlechaCarrusel.vue'; 
   import IndicadoresCarrusel from '@/components/IndicadoresCarrusel.vue'; 
+  import { gsap } from "gsap";
 
   export default {
     name: 'carrousel',
     components: {
+      TarjetaCarrusel,
       FlechaCarrusel,
       IndicadoresCarrusel,
     },
@@ -44,12 +44,9 @@
     props: {
       imagenes: Array
     },
-    // mounted() {
-    //   setTimeout(this.mostrarProxImg,2000)
-    // },
-    // updated() {
-    //   setTimeout(this.mostrarProxImg,5000)
-    // },
+    updated() {
+      gsap.fromTo(".tarjeta-carrusel", {duration: 2, opacity: 0}, {duration: 2, opacity: 1});
+    },
     computed: {
       imagenActual() {
         return this.imagenes[this.imgActual];
@@ -90,23 +87,10 @@
     flex-flow: column;
   }
 
-  .img-carr {
-    width: 200px;
-    height: auto;
-    border-radius: 1%;
-  }
-
-  /* Medium devices (landscape tablets, 768px and up) */
-  @media (min-width: 768px) {
-    .img-carr {
-      width: 300px;
-    }
-  }
-
-  @media (min-width: 992px) { 
-    .img-carr {
-      width: 400px;
-    }
+  .imagen-carrusel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
 </style>

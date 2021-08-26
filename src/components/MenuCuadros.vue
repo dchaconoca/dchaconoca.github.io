@@ -9,7 +9,7 @@
 </template>
 
 <script>
-  import paramMenu from "@/assets/language/ES/ES-paramMenu.json";
+  import paramMenu from "@/assets/config/ES/ES-paramMenu.json";
 
   export default {
     name: 'menu-cuadros',

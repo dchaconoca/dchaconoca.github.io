@@ -6,7 +6,7 @@
     "enlace": "/blog/",
     "titulo": "Symbols en Javascrip", 
     "texto": "Qué son y para qué se usan",
-    "tecnologias": "Javascrip"
+    "tecnologias": "Javascript"
   },
   {
     "id": "prototipos",
@@ -15,6 +15,6 @@
     "enlace": "/blog/",
     "titulo": "Prototipos en Javascript", 
     "texto": "¿Qué significa que Javascript sea un lenguaje orientado a prototipos?",
-    "tecnologias": "Javascrip"
+    "tecnologias": "Javascript"
   }     
 ]

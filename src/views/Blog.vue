@@ -8,7 +8,7 @@
 
 <script>
 import TarjetaArt from '@/components/TarjetaArt.vue'
-import paramBlog from "@/assets/language/ES/ES-paramBlog.json";
+import paramBlog from "@/assets/config/ES/ES-paramBlog.json";
 
 export default {
   name: 'Blog',
@@ -27,10 +27,10 @@ export default {
 
   .blog {
     display: flex;
-    flex-direction:row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 2%;
+    width: 95%;
+    justify-content: space-around;
   }
+
 
 </style>
