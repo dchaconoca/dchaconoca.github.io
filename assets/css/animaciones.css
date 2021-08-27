@@ -1,0 +1,30 @@
+
+@keyframes moverseOp0 {
+  from { transform: rotate(-10deg); }  /* Primer fotograma */
+  to { transform: rotate(0); }  /* Último fotograma */
+}
+
+@keyframes moverseOp1 {
+  from { transform: rotate(8deg); }  /* Primer fotograma */
+  to { transform: rotate(0); }  /* Último fotograma */
+}
+
+@keyframes moverseOp2 {
+  from { transform: rotate(-12deg); }  /* Primer fotograma */
+  to { transform: rotate(0); }  /* Último fotograma */
+}
+
+@keyframes moverseOp3 {
+  from { transform: rotate(12deg); }  /* Primer fotograma */
+  to { transform: rotate(0); }  /* Último fotograma */
+}
+
+@keyframes moverseOp4 {
+  from { transform: rotate(-15deg); }  /* Primer fotograma */
+  to { transform: rotate(0); }  /* Último fotograma */
+}
+
+@keyframes moverseOp5 {
+  from { transform: rotate(20deg); }  /* Primer fotograma */
+  to { transform: rotate(0); }  /* Último fotograma */
+}

@@ -1,0 +1,29 @@
+@media (min-width: 576px) { 
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  h3 {
+    font-size: 0.8rem;
+  }
+ }
+
+@media (min-width: 768px) { 
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+}
+
+/* @media (min-width: 992px) { ... }
+
+@media (min-width: 1200px) { ... }
+
+@media (min-width: 1400px) { ... } */
