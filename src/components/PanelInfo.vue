@@ -38,21 +38,35 @@
     height: 100vh;
   }
 
-  h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 40%;
-  }
-
   .menu-panel {
     padding-top: 15%;
   }
 
+  h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 35%;
+  }
+  
   .footer {
     padding-top: 5%;
     text-align: center;
   }
 
+  .footer p {
+    font-size: 0.7rem;
+  }
+
+  @media (min-width: 768px) { 
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .footer p {
+      font-size: 1rem;
+    }
+  }
 
 </style>

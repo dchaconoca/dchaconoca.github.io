@@ -3,7 +3,6 @@ import Inicio from '../views/Inicio.vue'
 import Acerca from '../views/Acerca.vue'
 import Proyectos from '../views/Proyectos.vue'
 import DetalleProyectos from '../views/DetalleProyectos.vue'
-import CV from '../views/CV.vue'
 import ChezDiana from '../views/ChezDiana.vue'
 import Blog from '../views/Blog.vue'
 import DetallePosts from '../views/DetallePosts.vue'
@@ -28,11 +27,6 @@ const routes = [
     path: '/proyectos/:id',
     name: 'DetalleProyectos',
     component: DetalleProyectos
-  },
-  {
-    path: '/cv',
-    name: 'CV',
-    component: CV
   },
   {
     path: '/chez-diana',
