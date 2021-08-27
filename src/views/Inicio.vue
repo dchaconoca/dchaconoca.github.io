@@ -35,24 +35,47 @@ export default {
   }
 
   .textos {
-    line-height: 0.5rem;
     text-align: center;
   }
 
   h1 {
-    font-size: 2.5rem;
-  }
-
-  h2 {
     font-size: 1.5rem;
   }
 
-  h3 {
+  h2 {
     font-size: 1rem;
   }
 
+  h3 {
+    font-size: 0.7rem;
+  }
+
    #img-diana {
-    width: 300px;
-    border-radius: 5%;
+    width: 200px;
+    border-radius: 1%;
+  }
+
+  @media (min-width: 768px) { 
+
+    .textos {
+      line-height: 0.5rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+
+    #img-diana {
+      width: 300px;
+      border-radius: 1%;
+    }
   }
 </style>

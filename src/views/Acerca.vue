@@ -27,13 +27,6 @@ export default {
 </script>
 
 <style scoped>
-  :root {
-    --azul: #363488;
-    --rojo: #d61011;
-    --amarillo: #e2c200;
-    --verde: #73b829;
-    --gris: #636363;
-  }
 
   #img-diana {
     width: 200px;

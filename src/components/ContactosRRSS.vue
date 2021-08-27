@@ -33,12 +33,9 @@
 </script>
 
 <style scoped>
-  :root {
-    --gris: #636363;
-  }
 
   .fab, .fas, .a {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 
   #contactos-rrss {
@@ -52,6 +49,13 @@
 
   .texto-oscuro {
     color: var(--gris);
+  }
+
+  @media (min-width: 768px) { 
+
+  .fab, .fas, .a {
+      font-size: 2rem;
+    }
   }
 
 </style>
