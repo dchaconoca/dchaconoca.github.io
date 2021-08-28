@@ -45,7 +45,7 @@ export default {
     --amarillo: #e2c200;
     --verde: #73b829;
     --gris: #636363;
-    --gris-claro: #80808a;
+    --gris-claro: #f5f5f5;
   }
 
   .app {
