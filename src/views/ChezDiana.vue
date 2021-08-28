@@ -1,13 +1,30 @@
 <template>
   <div class="chez-diana">
     <div v-html="contenido"/>
-      <CarruselInfinito class="carrusel" 
-          :imagenes="imagenes" />
-  </div>
+      <blockquote class="nota">
+        <em>"Todo viene de los recuerdos de la infancia y de los domingos familiares en que nos metíamos en la cocina a inventar algo diferente. De esos momentos nos nació el gusto por los inventos culinarios. Eso, unido a la satisfacción de tener gente en la casa y compartir con ellos, como en familia, alrededor de una buena comida, nos llevó a tomar la decisión de crear un lugar para sentirse “como en casa”. Y así nació Chez Diana".</em>
+      </blockquote>
+      <p>
+        Puedes saber más sobre <strong>Chez Diana</strong> siguiendo sus redes:
+      </p>
+      <div class="redes">
+        <div id="FB">
+          <a href="https://www.facebook.com/ChezDianaLG" target="_blank" title="Ir a página de Facebook Chez Diana">
+          <i class="fab fa-facebook-square"></i></a>
+        </div>
+        <div id="IG">
+          <a href="http://instagram.com/chezdianalg" target="_blank" title="Ir a perfil Instagram Chez Diana">
+          <i class="fab fa-instagram-square"></i></a>
+        </div>
+      </div>
+    </div>
+    <CarruselInfinito class="carrusel" 
+        :imagenes="imagenes" />
+  
 </template>
 
 <script>
-import chezDiana from "@/assets/language/ES/ES-recetario-flask.md";
+import chezDiana from "@/assets/language/ES/ES-chez-diana.md";
 import CarruselInfinito from '@/components/CarruselInfinito.vue';
 import imagenes from "@/assets/config/ES/ES-imgCD.json";
 
@@ -30,6 +47,22 @@ export default {
   .carrousel {
     display: flex;
     justify-content: center;
+  }
+
+  .nota {
+    background-color: var(--gris-claro);
+    padding: 1.5%;
+    text-align: justify;
+  }
+
+  .redes {
+    display: flex;
+    letter-spacing: 3ch;
+  }
+
+  .fab, .fas, .a {
+    font-size: 2rem;
+    color: var(--gris);
   }
 
 </style>

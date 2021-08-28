@@ -26,8 +26,8 @@
 <style scoped>
 
   .articulo {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border: 1px solid grey;
     border-radius: 1%;
     background-color: white;
