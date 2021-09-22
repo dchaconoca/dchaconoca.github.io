@@ -13,7 +13,8 @@
       <i class="fab fa-twitter-square" v-bind:class="[esClaro ? 'texto-claro' : 'texto-oscuro']"></i></a>
     </div>
     <div id="item4">
-      <a download="CV-Diana.pdf" target="_blank" href="assets/docs/CVDianaChacon.pdf" title="Descargar CV">
+      <!-- <a download="CVDianaChacon.pdf" target="_blank" href="require(`@/assets/docs/CVDianaChacon.pdf`)" title="Descargar CV"> -->
+      <a download="CVDianaChacon.pdf" target="_blank" href="assets/docs/CVDianaChacon.pdf" title="Descargar CV">
       <i class="fas fa-file-download" v-bind:class="[esClaro ? 'texto-claro' : 'texto-oscuro']"></i></a>
     </div>
     <div id="item5">

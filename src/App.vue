@@ -2,7 +2,7 @@
   <div class="app">
     <div class="contenedor">
       <div class="info">
-        <PanelInfo :titulo="titulo" class="panel-info" />
+        <PanelInfo />
       </div>
       <div class="contenido">
         <!-- route outlet -->
@@ -44,13 +44,21 @@ export default {
     --rojo: #d61011;
     --amarillo: #e2c200;
     --verde: #73b829;
-    --gris: #636363;
-    --gris-claro: #f5f5f5;
+    --gris: #747474;
+    --gris-oscuro: #4b4a4a;
+    --gris-claro: #c4c4c4;
+  }
+
+  body, html {
+    margin: 0; 
+    padding: 0; 
+    border: 0;
+    overflow: hidden;
   }
 
   .app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
-    color: var(--gris);
+    color: var(--gris-oscuro);
     margin: 0; 
     padding: 0; 
     border: 0;
@@ -62,28 +70,24 @@ export default {
     color: black;
   }
 
-  .contenedor {
-    position: relative;
-    display: inline;
-    margin: 0; 
-    padding: 0; 
-    border: 0;
-  }
-
   .info {
-    position: fixed;
-    top: 0; 
-    left: 0; 
-    width: 30%;
-    z-index: 10;
+    background-color: black;
   }
 
   .contenido {
-    position: relative;
-    left: 30%;
-    width: 68%;
-    overflow-y: auto;
     margin: 2%;
+    overflow: auto;
+  }
+
+  .contenedor {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    border: 0;
   }
 
 </style>

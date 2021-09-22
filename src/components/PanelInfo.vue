@@ -3,14 +3,15 @@
     <div class="menu-panel">
       <MenuCuadros v-bind:esClaro="true" />
     </div>
-      <h2>{{ titulo }}</h2> 
-      <div class="contactos">
-        <ContactosRRSS v-bind:esClaro="true" /> 
-      </div>
-      <footer class="footer">
-        <p>Hecho en VueJS por Diana Chacón Ocariz - 2021</p>
-      </footer>
+    <h2 class="titulo">Diana Chacón Ocariz</h2> 
+    <div class="contactos">
+      <ContactosRRSS v-bind:esClaro="true" /> 
+    </div>
+    <footer class="footer">
+      <p>Hecho en VueJS por Diana Chacón Ocariz - 2021</p>
+    </footer>
   </div>
+  
 </template>
 
 <script>
@@ -22,50 +23,50 @@
     components: {
       ContactosRRSS,
       MenuCuadros,
-    },
-    props: {
-      titulo: String,
-      clases: Array
-    },
+    }
   }
 </script>
 
 <style scoped>
 
   .panel-info {
+    display: grid;
+    grid-template-rows: 9fr 1fr 1fr 1fr;
     color: white;
     background-color: black;
     height: 100vh;
   }
 
   .menu-panel {
-    padding-top: 15%;
+    padding-top: 10%;
   }
 
-  h2 {
+  .titulo {
     font-size: 1rem;
     font-weight: bold;
     text-align: center;
-    padding-top: 35%;
+  }
+
+  .contactos {
+    margin-top: 2%;
   }
   
   .footer {
-    padding-top: 5%;
     text-align: center;
   }
 
   .footer p {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
   }
 
   @media (min-width: 768px) { 
 
-    h2 {
+    .titulo {
       font-size: 2rem;
     }
 
     .footer p {
-      font-size: 1rem;
+      font-size: 0.8rem;
     }
   }
 
