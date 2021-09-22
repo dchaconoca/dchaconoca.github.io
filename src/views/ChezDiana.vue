@@ -1,9 +1,10 @@
 <template>
   <div class="chez-diana">
-    <div v-html="contenido"/>
-      <blockquote class="nota">
-        <em>"Todo viene de los recuerdos de la infancia y de los domingos familiares en que nos metíamos en la cocina a inventar algo diferente. De esos momentos nos nació el gusto por los inventos culinarios. Eso, unido a la satisfacción de tener gente en la casa y compartir con ellos, como en familia, alrededor de una buena comida, nos llevó a tomar la decisión de crear un lugar para sentirse “como en casa”. Y así nació Chez Diana".</em>
-      </blockquote>
+    <h1>Chez Diana</h1>
+    <blockquote class="nota">
+      <em>"Todo viene de los recuerdos de la infancia y de los domingos familiares en que nos metíamos en la cocina a inventar algo diferente. De esos momentos nos nació el gusto por los inventos culinarios. Eso, unido a la satisfacción de tener gente en la casa y compartir con ellos una buena comida como en familia, nos llevó a tomar la decisión de crear un lugar para sentirse “como en casa”. Y así nació Chez Diana".</em>
+    </blockquote>
+    <div v-html="contenido"/>   
       <p>
         Puedes saber más sobre <strong>Chez Diana</strong> siguiendo sus redes:
       </p>

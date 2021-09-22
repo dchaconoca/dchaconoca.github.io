@@ -1,5 +1,6 @@
 <template>
   <div class="proyectos">
+    <h1>Proyectos y Experiencia Profesional en Desarrollo de Software</h1>
     <div v-for="proyecto in proyectos" :key="proyecto.id">
       <TarjetaArt :articulo="proyecto" class="art-proy" />
     </div>
@@ -26,10 +27,7 @@ export default {
 <style scoped>
 
   .proyectos {
-    display: flex;
-    flex-wrap: wrap;
     width: 95%;
-    justify-content: space-around;
   }
 
 

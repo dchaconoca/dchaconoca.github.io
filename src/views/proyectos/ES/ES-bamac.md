@@ -1,11 +1,22 @@
-## Recetario en Flask
+# Experiencia Profesional en PSA Peugeot-Citröen
 
-Cuando fui a abrir mi restaurant, como todo el mundo que comienza un negocio, me preguntaba cuánto cobrar.
+<img class="img-art" src="../../../assets/img/proyectos/logo-psa.jpg" alt="Vista del web site">
 
-Para eso, me hice en esa época una pequeña aplicación con Access, donde tenía ingredientes con sus precios, costos fijos, recetas... Y así calculaba costos y precios.
 
-En los últimos meses he ido retomando este proyecto pero para practicar Python, Flask, SQLAlchemy... 
+## Jefe de Proyectos de la aplicación BAMAC (Base de Datos Marketing Clientes)
 
-Aún falta mucho, pero poco a poco iré integrando funcionalidades y practicando frameworks.
+Conjunto de aplicaciones para las 2 marcas y varios países, encargadas de recopilar, normalizar e integrar datos de diferentes fuentes con la finalidad de ser utilizados por los departamentos de Marketing.
 
-Aquí podrán encontrar el proyecto en Flask -> [Recetario en Flask](https://github.com/dchaconoca/Recetario-en-Flask)
+- Análisis de requerimientos de los usuarios, concepción y desarrollo de nuevas funcionalidades
+- Mantenimiento de la aplicación
+- Conducción de proyectos: Planificación, manejo de
+equipo, seguimiento de proyectos, cálculo de
+presupuestos
+
+*París-Francia: Junio 2001 - Noviembre 2007*
+
+## Tecnologías utilizadas:
+
+- *Oracle*
+- *C*
+  

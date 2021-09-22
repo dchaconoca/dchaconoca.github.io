@@ -1,6 +1,9 @@
 .DS_Store
-node_modules
+# dependencies
+node_modules/
 
+# Eliminar cuando se va a instalar en producción
+/dist
 
 # local env files
 .env.local

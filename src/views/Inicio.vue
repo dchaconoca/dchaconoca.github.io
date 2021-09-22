@@ -4,8 +4,8 @@
     <img src="../assets/img/Diana.jpg" alt="Diana Chacón Ocariz" id="img-diana"> 
     <div v-html="contenido"/>
     <div class="textos">
-      <h2>Análisis y desarrollo de software</h2>
-      <h3>Python: Django, Flask - SQL - Javascript - HTML/CSS</h3>
+      <h2>Desarrollo de software</h2>
+      <h3>Python: Flask, Django - SQL - Javascript - HTML/CSS - VueJS</h3>
     </div>
   </div>
 </template>
