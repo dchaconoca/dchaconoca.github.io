@@ -3,7 +3,7 @@
 node_modules/
 
 # Eliminar cuando se va a instalar en producción
-/dist
+# /dist
 
 # local env files
 .env.local
