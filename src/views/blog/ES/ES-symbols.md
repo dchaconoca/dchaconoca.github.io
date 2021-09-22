@@ -11,7 +11,7 @@
     • No sufren “casting ” de tipos (no se convierten implícitamente en otro tipo como string)
     
 ### Usos
-    • Los valores únicos que se producen con Symbol() pueden ser utilizados como claves (keys) de de los objetos y así poder crear nuevas
+    • Los valores únicos que se producen con Symbol() pueden ser utilizados como claves (keys)   de los objetos y así poder crear nuevas
       propiedades sin que éstas entren en conflicto con las existentes. Ésto es particularmente útil cuando se habla de objetos “grandes” 
       como el objeto global Wnindow
     • Evita la sobreescritura de propiedades y métodos ya existentes

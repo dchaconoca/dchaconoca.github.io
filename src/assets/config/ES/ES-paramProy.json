@@ -1,56 +1,52 @@
 [
   {
-    "id": "gestion-receta",
-    "imagen": "Diana.jpg",
-    "txtImg": "Recetas de cocina",
+    "id": "website",
+    "imagen": "proyectos/site.png",
+    "txtImg": "Web Diana Chacón Ocariz",
     "enlace": "/proyectos/",
-    "titulo": "Gestión receta de cocina", 
-    "texto": "CRUD de recetas de cocina y cálculo de su costo",
-    "tecnologias": "Python: Flask, SQLAlchemy - MySQL"
+    "titulo": "Mi web site en VueJS", 
+    "texto": "Mi web site personal hecho con VueJS",
+    "fecha": "Año 2021",
+    "tecnologias": ["VueJS", "Javascript", "HTML/CSS"]
   },
   {
-    "id": "website-vue",
-    "imagen": "logo.png",
-    "txtImg": "Portafolio Diana con VueJS",
+    "id": "recetas",
+    "imagen": "proyectos/recetas.png",
+    "txtImg": "Recetas de cocina",
     "enlace": "/proyectos/",
-    "titulo": "Web site en VueJS", 
-    "texto": "Mi web site personal con VueJS",
-    "tecnologias": "Javascript: VueJS - HTML/CSS"
+    "titulo": "Recetas de cocina", 
+    "texto": "Cuando fui a abrir mi restaurant, como todo el mundo que comienza un negocio, me preguntaba cuánto cobrar",
+    "fecha": "Año 2021",
+    "tecnologias": ["Python", "Flask", "SQLAlchemy", "MySQL"]
   },
   {
     "id": "web-scraper",
-    "imagen": "logo.png",
-    "txtImg": "Web scraper con Python",
+    "imagen": "proyectos/scraping.png",
+    "txtImg": "Web scraping con Python",
     "enlace": "/proyectos/",
-    "titulo": "Web scraper con Python", 
-    "texto": "Web scraper de una página de precios de alimentos y generación de JSON",
-    "tecnologias": "Python: Beautifulsoup"
-  },
-  {
-    "id": "orm-sql",
-    "imagen": "Diana.jpg",
-    "txtImg": "Uso ORM SQLAlchemy",
-    "enlace": "/proyectos/",
-    "titulo": "SQLAlchemy y SQL", 
-    "texto": "Carga de datos en base SQLite usando SQLAlchemy. Consultas SQL",
-    "tecnologias": "Python: SQLAlchemy - SQLite - SQL"
+    "titulo": "Scraping de una página de precios", 
+    "texto": "Web scraper de una página de precios de alimentos y generación de archivo JSON  con los datos",
+    "fecha": "Año 2021",
+    "tecnologias": ["Python", "BeautifulSoup"]
   },
   {
     "id": "bamac",
-    "imagen": "Diana.jpg",
+    "imagen": "proyectos/logo-psa.jpg",
     "txtImg": "PSA Peugeot-Citröen",
     "enlace": "/proyectos/",
     "titulo": "Base de Datos Marketing Clientes", 
     "texto": "Experiencia profesional en PSA Peugeot-Citröen",
-    "tecnologias": "Oracle - C"
+    "fecha": "2001 - 2007",
+    "tecnologias": ["Oracle", "C"]
   },
   {
     "id": "manapro",
-    "imagen": "Diana.jpg",
+    "imagen": "proyectos/logo-manapro.png",
     "txtImg": "Manapro Consultores C.A.",
     "enlace": "/proyectos/",
     "titulo": "Concepción y desarrollo de componentes estándares", 
     "texto": "Experiencia profesional en Manapro Consultores C.A.",
-    "tecnologias": "Visual Basic - SQL Server"
+    "fecha": "1998 - 2001",
+    "tecnologias": ["Visual Basic", "SQL Server"]
   }     
 ]

@@ -4,19 +4,23 @@
       <div class="imagen"> 
         <img id="imagen" :src="require(`@/assets/img/${articulo.imagen}`)" :alt="articulo.txtImg">
       </div>
-      <div>
+      <div class="textos">
         <h4 class="titulo">{{ articulo.titulo }}</h4>
-        <p class="texto">{{ articulo.texto }}</p>
-        <br>
-        <p class="tecnos">{{ articulo.tecnologias }}</p>
+        <p class="subtitulo">{{ articulo.texto }}</p>
+        <p class="fecha">{{ articulo.fecha }}</p>
       </div>
+      <footer class="tecnos">
+        <div v-for="(tecno, index) in articulo.tecnologias" :key="index" class="tecnologia">
+          <strong>{{ tecno }}</strong>
+        </div>
+      </footer>
     </div>
   </router-link>
 </template>
 
 <script>
   export default {
-    name: 'cuadro-menu',
+    name: 'articulo',
     props: {
         articulo: Object
     },
@@ -26,41 +30,67 @@
 <style scoped>
 
   .articulo {
-    width: 250px;
-    height: 250px;
-    border: 1px solid grey;
+    display: grid;
+    width: 90%;
+    height: 150px;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 100px 50px;
+    column-gap: 1%;
+    row-gap: 1%;
+    border: 1px solid var(--gris);
     border-radius: 1%;
-    background-color: white;
-    box-shadow: 0px 3px 5px rgba(0,0,0,0.16), 0px 5px 10px rgba(0,0,0,0.08);
-    margin: 5%;
-  }
-
-  #imagen {
-    width: 50%;
-    height: auto;
+    margin: 2%;
+    padding: 1%;
   }
 
   .imagen {
+    grid-row: 1/3;
+    grid-column: 1/2;
     text-align: center;
   }
 
-  .articulo:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-  }
-
-  .titulo {
-    font-size: 1rem;
-    margin: 2%;
-  }
-
-  .texto {
-    font-size: 0.8rem;
-    margin: 2%;
+  .textos {
+    grid-row: 1/2;
+    grid-column: 2/3;
   }
 
   .tecnos {
-    font-size: 0.9rem;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    display: flex;
+    justify-content:flex-end;
+    font-size: 1rem;
     font-style: italic;
+    margin: 2%;
+  }
+
+  .tecnologia {
+    margin: 0 1%;
+    font-display: bold;
+  }
+
+  #imagen {
+    width: 150px;
+    height: 150px;
+  }
+
+  .articulo:hover {
+    box-shadow: 0 5px 10px rgba(47, 47, 47, 0.5);
+  }
+
+  .titulo {
+    font-size: 1.3rem;
+    margin: 2%;
+  }
+
+  .subtitulo {
+    font-size: 0.9rem;
+    margin: 2%;
+  }
+
+  .fecha {
+    font-size: 0.7rem;
+    color: var(--gris);
     margin: 2%;
   }
 
