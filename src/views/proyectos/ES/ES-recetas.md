@@ -4,7 +4,7 @@
 
 <div class="link-icon"> 
     <strong>Ver funcionamiento de la aplicación aquí:</strong>
-    <a href="https://github.com/dchaconoca/Recetario-en-Flask" target="_blank" title="Ir a proyecto en funcionamiento"><i class="fab fa-python"></i><a>
+    <a href="https://recetario-flask.herokuapp.com/" target="_blank" title="Ir a proyecto en funcionamiento"><i class="fab fa-python"></i><a>
 </div>
 
 <div class="link-icon">
