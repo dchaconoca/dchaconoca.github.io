@@ -45,8 +45,13 @@ export default {
     --amarillo: #e2c200;
     --verde: #73b829;
     --gris: #747474;
+<<<<<<< HEAD
     --gris-oscuro: #4b4a4a;
     --gris-claro: #c4c4c4;
+=======
+    --gris-oscuro: #535353;
+    --gris-claro: #cecece;
+>>>>>>> master
   }
 
   body, html {

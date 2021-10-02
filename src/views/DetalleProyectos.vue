@@ -47,6 +47,14 @@ export default {
     margin: 2%;
   }
 
+<<<<<<< HEAD
+=======
+  .icono {
+    width: 30px;
+    height: auto;
+  }
+
+>>>>>>> master
   .fab, .fas, .a {
     font-size: 2rem;
     color: var(--gris);
