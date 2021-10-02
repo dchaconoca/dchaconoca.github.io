@@ -25,7 +25,7 @@
     "txtImg": "Web scraping con Python",
     "enlace": "/proyectos/",
     "titulo": "Scraping de una página de precios", 
-    "texto": "Web scraper de una página de precios de alimentos y generación de archivo JSON  con los datos",
+    "texto": "Web scraper de una página de precios de alimentos y generación de archivo JSON  con los datos recolectados de la página",
     "fecha": "Año 2021",
     "tecnologias": ["Python", "BeautifulSoup"]
   },

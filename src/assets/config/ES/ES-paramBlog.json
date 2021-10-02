@@ -1,20 +1,32 @@
 [
   {
-    "id": "symbols",
-    "imagen": "Diana.jpg",
-    "txtImg": "Symbols en Javascrip",
+    "id": "sql1",
+    "imagen": "blog/sql.png",
+    "txtImg": "SQL",
     "enlace": "/blog/",
-    "titulo": "Symbols en Javascrip", 
-    "texto": "Qué son y para qué se usan",
-    "tecnologias": "Javascript"
+    "titulo": "¿Cómo hacer consultas con SQL?", 
+    "texto": "A partir de una necesidad funcional, cómo construimos un modelo relacional y cómo hacemos consultas SQL",
+    "fecha": "04/10/2021",
+    "tecnologias": ["SQL"]
   },
   {
-    "id": "prototipos",
-    "imagen": "Diana.jpg",
-    "txtImg": "Prototipos en Javascript",
+    "id": "sql2",
+    "imagen": "blog/sql.png",
+    "txtImg": "SQL",
     "enlace": "/blog/",
-    "titulo": "Prototipos en Javascript", 
-    "texto": "¿Qué significa que Javascript sea un lenguaje orientado a prototipos?",
-    "tecnologias": "Javascript"
-  }     
+    "titulo": "¿Cómo hacer consultas con SQL? Ejemplos", 
+    "texto": "Ejemplos de cómo hacer consultas SQL a partir de preguntas funcionales",
+    "fecha": "04/10/2021",
+    "tecnologias": ["SQL"]
+  },
+  {
+    "id": "symbols",
+    "imagen": "blog/javascript.png",
+    "txtImg": "Symbols en Javascript",
+    "enlace": "/blog/",
+    "titulo": "Symbols en Javascript", 
+    "texto": "Qué son y para qué se usan",
+    "fecha": "14/04/2021",
+    "tecnologias": ["Javascript"]
+  }    
 ]

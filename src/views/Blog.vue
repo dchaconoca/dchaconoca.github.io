@@ -26,10 +26,7 @@ export default {
 <style scoped>
 
   .blog {
-    display: flex;
-    flex-wrap: wrap;
     width: 95%;
-    justify-content: space-around;
   }
 
 

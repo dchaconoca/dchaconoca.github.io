@@ -47,6 +47,11 @@ export default {
     margin: 2%;
   }
 
+  .icono {
+    width: 30px;
+    height: auto;
+  }
+
   .fab, .fas, .a {
     font-size: 2rem;
     color: var(--gris);
