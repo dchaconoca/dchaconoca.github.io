@@ -1,39 +1,49 @@
 <template>
   <div class="app">
-    <div class="contenedor">
-      <div class="info">
-        <PanelInfo />
+    <div>
+      <div @click="show = true" class="btn-menu" v-if="! show">
+        <i class="fas fa-bars"></i>
       </div>
-      <div class="contenido">
-        <!-- route outlet -->
-        <!-- component matched by the route will render here -->
-        <router-view v-slot="{ Component }">
-          <transition mode="out-in"
-                    enter-active-class="animate__animated animate__fadeIn"
-                    leave-active-class="animate__animated animate__fadeOut">
-            <component :is="Component" />
-          </transition>
-        </router-view>
-      </div>      
+
+      <div @click="show = false" class="btn-menu" v-if="show">
+        <i class="fas fa-times"></i>
+      </div>
+        
+      <transition name="slide-fade">
+        <div class="info" v-if="show">
+          <PanelInfo />
+        </div>
+      </transition>
+    </div>
+    
+    <div class="contenido">
+      <!-- route outlet -->
+      <!-- component matched by the route will render here -->
+      <router-view v-slot="{ Component }">
+        <transition mode="out-in"
+                  enter-active-class="animate__animated animate__fadeIn"
+                  leave-active-class="animate__animated animate__fadeOut">
+          <component :is="Component" />
+        </transition>
+      </router-view>
     </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-// import TransicionPagina from '@/components/TransicionPagina.vue';
 import PanelInfo from '@/components/PanelInfo.vue'
 
 export default {
   name: 'app',
   components: {
     PanelInfo
-  },
+  }, 
   data() {
-    return {
-      titulo: "Diana Chacón Ocariz",
-    }
-  }
+      return {
+        show: false
+      }
+    },
 }
 </script>
 
@@ -53,7 +63,6 @@ export default {
     margin: 0; 
     padding: 0; 
     border: 0;
-    overflow: hidden;
   }
 
   .app {
@@ -62,7 +71,22 @@ export default {
     margin: 0; 
     padding: 0; 
     border: 0;
-    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .btn-menu {
+    position: fixed;
+    left: 1%;
+    top: 1%;
+    z-index: 100;
+  }
+
+  .info {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 90vw;
   }
 
   a {
@@ -70,24 +94,41 @@ export default {
     color: black;
   }
 
-  .info {
-    background-color: black;
+  .fas {
+    font-size: 2rem;
   }
 
-  .contenido {
-    margin: 2%;
-    overflow: auto;
+  /* Enter and leave animations can use different */
+  /* durations and timing functions.              */
+  .slide-fade-enter-active,
+  .slide-fade-leave-active  {
+    transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
   }
 
-  .contenedor {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    border: 0;
+  .slide-fade-enter-from,
+  .slide-fade-leave-to {
+    transform: translateX(-50px);
+    opacity: 0;
+
+  }
+
+  .content-fade-enter-from,
+  .content-fade-leave-to {
+    transform: translateX(50px);
+  }
+
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) { 
+    .info {
+      width: 50vw;
+    }
+  }
+
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) { 
+    .info {
+      width: 30vw;
+    }
   }
 
 </style>

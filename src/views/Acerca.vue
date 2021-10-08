@@ -28,11 +28,39 @@ export default {
 
 <style scoped>
 
+  @import '../assets/css/responsive.css';
+
   #img-diana {
-    width: 200px;
+    width: 100px;
     border-radius: 5%;
     float: right;
     margin: 2%;
+  }
+
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) { 
+
+    #img-diana {
+      width: 150px;
+    }
+  }
+
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) { 
+
+    #img-diana {
+      width: 200px;
+    }
+
+  }
+
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) { 
+
+    #img-diana {
+      width: 250px;
+    }
+
   }
  
 </style>

@@ -36,7 +36,7 @@
 <style scoped>
 
   .fab, .fas, .a {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 
   #contactos-rrss {
@@ -50,13 +50,6 @@
 
   .texto-oscuro {
     color: var(--gris);
-  }
-
-  @media (min-width: 768px) { 
-
-  .fab, .fas, .a {
-      font-size: 2rem;
-    }
   }
 
 </style>

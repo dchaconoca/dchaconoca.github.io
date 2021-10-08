@@ -4,10 +4,10 @@
     "imagen": "proyectos/site.png",
     "txtImg": "Web Diana Chacón Ocariz",
     "enlace": "/proyectos/",
-    "titulo": "Mi web site en VueJS", 
+    "titulo": "Mi web site", 
     "texto": "Mi web site personal hecho con VueJS",
     "fecha": "Año 2021",
-    "tecnologias": ["VueJS", "Javascript", "HTML/CSS"]
+    "tecnologias": ["VueJS", "HTML/CSS"]
   },
   {
     "id": "recetas",
@@ -15,9 +15,9 @@
     "txtImg": "Recetas de cocina",
     "enlace": "/proyectos/",
     "titulo": "Recetas de cocina", 
-    "texto": "Cuando fui a abrir mi restaurant, como todo el mundo que comienza un negocio, me preguntaba cuánto cobrar",
+    "texto": "Cuando fui a abrir mi restaurant, me preguntaba cuánto cobrar",
     "fecha": "Año 2021",
-    "tecnologias": ["Python", "Flask", "SQLAlchemy", "MySQL"]
+    "tecnologias": ["Flask", "PostgreSQL"]
   },
   {
     "id": "web-scraper",
@@ -25,7 +25,7 @@
     "txtImg": "Web scraping con Python",
     "enlace": "/proyectos/",
     "titulo": "Scraping de una página de precios", 
-    "texto": "Web scraper de una página de precios de alimentos y generación de archivo JSON  con los datos recolectados de la página",
+    "texto": "Web scraper de una página de precios de alimentos",
     "fecha": "Año 2021",
     "tecnologias": ["Python", "BeautifulSoup"]
   },

@@ -23,6 +23,7 @@ export default {
     background: transparent;
     cursor: pointer;
     opacity: 0.5;
+    display: none;
   }
 
   .btn:focus {
@@ -43,10 +44,10 @@ export default {
     width: auto;
   }
 
-  /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (max-width: 768px) {
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
     .btn {
-      display: none;
+      display: contents;
     }
   }
 

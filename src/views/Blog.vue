@@ -25,9 +25,6 @@ export default {
 
 <style scoped>
 
-  .blog {
-    width: 95%;
-  }
-
+  @import '../assets/css/responsive.css';
 
 </style>

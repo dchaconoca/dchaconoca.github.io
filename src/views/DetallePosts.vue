@@ -38,8 +38,10 @@ export default {
 <style>
   /* No limitamos el scoop para que puedan aplicarse estilos al markdown */
   /* Se pueden escribir etiquetas html directamente en el documento markdown y agregar clases css */
-
+  
    @import '../assets/css/markdown.css';
+   @import '../assets/css/responsive.css';
+   
 
   .img-art {
     margin: auto;

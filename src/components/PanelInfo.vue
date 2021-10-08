@@ -42,7 +42,7 @@
   }
 
   .titulo {
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: bold;
     text-align: center;
   }
@@ -56,10 +56,10 @@
   }
 
   .footer p {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
   }
 
-  @media (min-width: 768px) { 
+  /* @media (min-width: 768px) { 
 
     .titulo {
       font-size: 2rem;
@@ -68,6 +68,6 @@
     .footer p {
       font-size: 0.8rem;
     }
-  }
+  } */
 
 </style>

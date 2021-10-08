@@ -7,8 +7,10 @@
         <i class="fab fa-github-square" v-bind:class="[esClaro ? 'texto-claro' : 'texto-oscuro']"></i></a>
       </p>
     </div>
-    <div v-for="proyecto in proyectos" :key="proyecto.id">
-      <TarjetaArt :articulo="proyecto" class="art-proy" />
+    <div class="lista-proy">
+      <div v-for="proyecto in proyectos" :key="proyecto.id">
+        <TarjetaArt :articulo="proyecto" class="art-proy" />
+      </div>
     </div>
   </div>
 </template>
@@ -32,9 +34,6 @@ export default {
 
 <style scoped>
 
-  .proyectos {
-    width: 95%;
-  }
-
+  @import '../assets/css/responsive.css';
 
 </style>

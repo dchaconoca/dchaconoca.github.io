@@ -1,45 +1,48 @@
 <template>
-  <div id="inicio">
-    <h1>¡Hola! Soy Diana</h1>
-    <img src="../assets/img/Diana.jpg" alt="Diana Chacón Ocariz" id="img-diana"> 
-    <div v-html="contenido"/>
+  <div class="inicio">
+    <div class="menu-panel">
+      <MenuCuadros v-bind:esClaro="false" />
+    </div>
+    <h1>Diana Chacón Ocariz</h1>
     <div class="textos">
       <h2>Desarrollo de software</h2>
-      <h3>Python: Flask, Django - SQL - Javascript - HTML/CSS - VueJS</h3>
+      <h3>Python - SQL - Javascript - HTML/CSS - VueJS</h3>
     </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import inicio from "@/assets/language/ES/ES-inicio.md";
+// import inicio from "@/assets/language/ES/ES-inicio.md";
+import MenuCuadros from '@/components/MenuCuadros.vue';
 
 export default {
   name: 'Inicio',
-  data() {
-    return {
-      contenido: inicio
+  components: {
+      MenuCuadros
     }
-  }
 }
 </script>
 
 <style scoped>
-  #inicio {
+  .inicio {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 95vh;
+    width: 100vw;
+    height: 100vh;
+    background: black;
   }
 
   .textos {
     text-align: center;
+    color: white;
   }
 
   h1 {
     font-size: 1.5rem;
+    color: white;
   }
 
   h2 {
@@ -48,11 +51,6 @@ export default {
 
   h3 {
     font-size: 0.7rem;
-  }
-
-   #img-diana {
-    width: 200px;
-    border-radius: 1%;
   }
 
   @media (min-width: 768px) { 
@@ -71,11 +69,6 @@ export default {
 
     h3 {
       font-size: 1rem;
-    }
-
-    #img-diana {
-      width: 300px;
-      border-radius: 1%;
     }
   }
 </style>

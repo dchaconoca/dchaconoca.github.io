@@ -45,6 +45,8 @@ export default {
 
 <style scoped>
 
+  @import '../assets/css/responsive.css';
+
   .carrousel {
     display: flex;
     justify-content: center;

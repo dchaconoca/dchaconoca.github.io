@@ -60,14 +60,14 @@
 
   .cuadro:hover p {
     visibility: visible;
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
 
   #op0 {
     grid-column: x4 / x6;
     grid-row: y3 / y5;
-    width: 25px;
-    height: 25px;
+    width: 45px;
+    height: 45px;
     background-color: white;
     animation: moverseOp0 1s ease infinite alternate both running;
   }
@@ -75,8 +75,8 @@
   #op1 {
     grid-column: x2 / x4;
     grid-row: y0 / y2;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     background-color: var(--rojo);
     animation: moverseOp1 1s ease 0.3s infinite alternate both running;
   }
@@ -84,8 +84,8 @@
   #op2 {
     grid-column: x1 / x3;
     grid-row: y5 / y7;
-    width: 35px;
-    height: 35px;
+    width: 65px;
+    height: 65px;
     background-color: var(--amarillo);
     animation: moverseOp2 1s ease 0.5s infinite alternate both running;
   }
@@ -93,8 +93,8 @@
   #op3{
     grid-column: x5 / x7;
     grid-row: y6 / y8;
-    width: 25px;
-    height: 25px;
+    width: 50px;
+    height: 50px;
     background-color: var(--verde);
     animation: moverseOp3 1s ease 0.4s infinite alternate both running;
   }
@@ -102,8 +102,8 @@
   #op4 {
     grid-column: x7 / x9;
     grid-row: y1 / y3;
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
     background-color: var(--azul);
     animation: moverseOp4 1s ease 0.1s infinite alternate both running;
   }
@@ -147,7 +147,7 @@
     to { transform: rotate(0); }  /* Último fotograma */
   }
 
-
+/* 
   @media (min-width: 768px) { 
 
     #op0 {
@@ -176,6 +176,6 @@
     }
 
   
-  }
+  } */
 
 </style>
