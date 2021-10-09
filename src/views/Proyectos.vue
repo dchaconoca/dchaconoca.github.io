@@ -4,7 +4,7 @@
     <div> 
       <p><strong>Consultar otros proyectos, ejercicios y pruebas en mi perfil GitHub:</strong>
         <a href="https://github.com/dchaconoca" target="_blank" title="Ir a perfil GitHub">
-        <i class="fab fa-github-square" v-bind:class="[esClaro ? 'texto-claro' : 'texto-oscuro']"></i></a>
+        <i class="fab fa-github-square"></i></a>
       </p>
     </div>
     <div class="lista-proy">

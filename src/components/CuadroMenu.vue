@@ -2,7 +2,7 @@
   <!-- Se peuede elegir si mostrar o no el enlace (parámetro null) -->
   <div :id="cuadro.nombre" class="cuadro-menu" v-show="esVisible">
     <router-link to="enlace.link">
-      <p class="esClaro ? 'texto-claro' : 'texto-oscuro'">{{ cuadro.texto }}</p>
+      <p class="texto-claro">{{ cuadro.texto }}</p>
     </router-link>
   </div>
 </template>
@@ -39,10 +39,6 @@
 
   .texto-claro {
     color: white;
-  }
-
-  .texto-oscuro {
-    color: var(--gris);
   }
 
 </style>

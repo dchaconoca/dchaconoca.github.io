@@ -2,7 +2,7 @@
   <div class="menu-cuadros">
     <div v-for="opcion in opciones" :key="opcion.id" :id="opcion.id" class="cuadro" >
       <router-link :to="opcion.enlace.link">
-        <p v-bind:class="[esClaro ? 'texto-claro' : 'texto-oscuro']">{{ opcion.enlace.texto }}</p>
+        <p class="texto-claro">{{ opcion.enlace.texto }}</p>
       </router-link>
     </div>
   </div>
@@ -17,10 +17,7 @@
       return {
         opciones: paramMenu,
       }
-    },
-    props: {
-        esClaro: Boolean,
-    },
+    }
   }
 </script>
 
@@ -47,10 +44,6 @@
 
   .texto-claro {
     color: white;
-  }
-
-  .texto-oscuro {
-    color: var(--gris);
   }
 
   .cuadro:hover {
@@ -84,8 +77,8 @@
   #op2 {
     grid-column: x1 / x3;
     grid-row: y5 / y7;
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
     background-color: var(--amarillo);
     animation: moverseOp2 1s ease 0.5s infinite alternate both running;
   }
@@ -96,7 +89,7 @@
     width: 50px;
     height: 50px;
     background-color: var(--verde);
-    animation: moverseOp3 1s ease 0.4s infinite alternate both running;
+    animation: moverseOp3 1s ease 0.6s infinite alternate both running;
   }
 
   #op4 {
@@ -105,7 +98,7 @@
     width: 60px;
     height: 60px;
     background-color: var(--azul);
-    animation: moverseOp4 1s ease 0.1s infinite alternate both running;
+    animation: moverseOp4 1s ease 0.8s infinite alternate both running;
   }
   
   #op0:hover,
@@ -118,64 +111,34 @@
 
       
   @keyframes moverseOp0 {
-    from { transform: rotate(-10deg); }  /* Primer fotograma */
-    to { transform: rotate(0); }  /* Último fotograma */
+    from { transform: scale(1.15);  }  /* Primer fotograma */
+    to { transform: rotate(-10deg); }  /* Último fotograma */
   }
 
   @keyframes moverseOp1 {
-    from { transform: rotate(8deg); }  /* Primer fotograma */
-    to { transform: rotate(0); }  /* Último fotograma */
+    from { transform: scale(1.15); }  /* Primer fotograma */
+    to { transform: rotate(8deg); }  /* Último fotograma */
   }
 
   @keyframes moverseOp2 {
-    from { transform: rotate(-12deg); }  /* Primer fotograma */
-    to { transform: rotate(0); }  /* Último fotograma */
+    from { transform: scale(1.15); }  /* Primer fotograma */
+    to { transform: rotate(-12deg); }  /* Último fotograma */
   }
 
   @keyframes moverseOp3 {
-    from { transform: rotate(12deg); }  /* Primer fotograma */
-    to { transform: rotate(0); }  /* Último fotograma */
+    from { transform: scale(1.15); }  /* Primer fotograma */
+    to { transform: rotate(12deg); }  /* Último fotograma */
   }
 
   @keyframes moverseOp4 {
-    from { transform: rotate(-15deg); }  /* Primer fotograma */
-    to { transform: rotate(0); }  /* Último fotograma */
+    from { transform: scale(1.15); }  /* Primer fotograma */
+    to { transform: rotate(-15deg); }  /* Último fotograma */
   }
 
   @keyframes moverseOp5 {
-    from { transform: rotate(20deg); }  /* Primer fotograma */
-    to { transform: rotate(0); }  /* Último fotograma */
+    from { transform: scale(1.15); }  /* Primer fotograma */
+    to { transform: rotate(20deg); }  /* Último fotograma */
   }
 
-/* 
-  @media (min-width: 768px) { 
-
-    #op0 {
-      width: 45px;
-      height: 45px;
-    }
-
-    #op1,
-    #op3 {
-      width: 50px;
-      height: 50px;
-    }
-
-    #op2 {
-      width: 65px;
-      height: 65px;
-    }
-
-    #op4 {
-      width: 60px;
-      height: 60px;
-    }
-
-    .cuadro:hover p {
-      font-size: 1rem;
-    }
-
-  
-  } */
 
 </style>

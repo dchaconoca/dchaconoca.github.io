@@ -31,7 +31,7 @@
   },
   {
     "id": "bamac",
-    "imagen": "proyectos/logo-psa.jpg",
+    "imagen": "proyectos/logo-psa.png",
     "txtImg": "PSA Peugeot-Citröen",
     "enlace": "/proyectos/",
     "titulo": "Base de Datos Marketing Clientes", 

@@ -86,7 +86,7 @@ export default {
     position: sticky;
     top: 0;
     left: 0;
-    width: 90vw;
+    width: 100vw;
   }
 
   a {

@@ -1,7 +1,7 @@
 <template>
   <div class="inicio">
     <div class="menu-panel">
-      <MenuCuadros v-bind:esClaro="false" />
+      <MenuCuadros />
     </div>
     <h1>Diana Chacón Ocariz</h1>
     <div class="textos">
