@@ -6,6 +6,7 @@
     <h1>Diana Chacón Ocariz</h1>
     <div class="textos">
       <h2>Desarrollo de software</h2>
+      <p>(Aprendiendo Ciencia de Datos)</p>
       <h3>Python - SQL - Javascript - HTML/CSS - VueJS</h3>
     </div>
   </div>

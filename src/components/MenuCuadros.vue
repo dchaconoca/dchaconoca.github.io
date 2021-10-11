@@ -62,7 +62,8 @@
     width: 45px;
     height: 45px;
     background-color: white;
-    animation: moverseOp0 1s ease infinite alternate both running;
+    transform: rotate(-10deg); 
+    animation: moverseOp0 2s ease 4s infinite alternate running backwards;
   }
 
   #op1 {
@@ -71,7 +72,8 @@
     width: 50px;
     height: 50px;
     background-color: var(--rojo);
-    animation: moverseOp1 1s ease 0.3s infinite alternate both running;
+    transform: rotate(8deg); 
+    animation: moverseOp1 2s ease infinite alternate running backwards;
   }
 
   #op2 {
@@ -80,7 +82,8 @@
     width: 60px;
     height: 60px;
     background-color: var(--amarillo);
-    animation: moverseOp2 1s ease 0.5s infinite alternate both running;
+    transform: rotate(-12deg); 
+    animation: moverseOp2 2s ease 1s infinite alternate running backwards;
   }
 
   #op3{
@@ -89,7 +92,8 @@
     width: 50px;
     height: 50px;
     background-color: var(--verde);
-    animation: moverseOp3 1s ease 0.6s infinite alternate both running;
+    transform: rotate(12deg); 
+    animation: moverseOp3 2s ease 3s infinite alternate running backwards;
   }
 
   #op4 {
@@ -98,10 +102,10 @@
     width: 60px;
     height: 60px;
     background-color: var(--azul);
-    animation: moverseOp4 1s ease 0.8s infinite alternate both running;
+    transform: rotate(-15deg); 
+    animation: moverseOp4 2s ease 2s infinite alternate running backwards;
   }
   
-  #op0:hover,
   #op1:hover,
   #op2:hover,
   #op3:hover,
@@ -111,34 +115,28 @@
 
       
   @keyframes moverseOp0 {
-    from { transform: scale(1.15);  }  /* Primer fotograma */
+    from { transform: scale(0.5);  }  /* Primer fotograma */
     to { transform: rotate(-10deg); }  /* Último fotograma */
   }
 
   @keyframes moverseOp1 {
-    from { transform: scale(1.15); }  /* Primer fotograma */
-    to { transform: rotate(8deg); }  /* Último fotograma */
+    from { transform: scale(0.5); }  /* Primer fotograma */
+    to { transform: rotate(8deg);  }  /* Último fotograma */
   }
 
   @keyframes moverseOp2 {
-    from { transform: scale(1.15); }  /* Primer fotograma */
+    from { transform: scale(0.5); }  /* Primer fotograma */
     to { transform: rotate(-12deg); }  /* Último fotograma */
   }
 
   @keyframes moverseOp3 {
-    from { transform: scale(1.15); }  /* Primer fotograma */
+    from { transform: scale(0.5); }  /* Primer fotograma */
     to { transform: rotate(12deg); }  /* Último fotograma */
   }
 
   @keyframes moverseOp4 {
-    from { transform: scale(1.15); }  /* Primer fotograma */
+    from { transform: scale(0.5); }  /* Primer fotograma */
     to { transform: rotate(-15deg); }  /* Último fotograma */
   }
-
-  @keyframes moverseOp5 {
-    from { transform: scale(1.15); }  /* Primer fotograma */
-    to { transform: rotate(20deg); }  /* Último fotograma */
-  }
-
 
 </style>
