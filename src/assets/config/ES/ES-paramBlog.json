@@ -5,7 +5,7 @@
     "txtImg": "SQL",
     "enlace": "/blog/",
     "titulo": "¿Cómo hacer consultas con SQL?", 
-    "texto": "A partir de una necesidad funcional, cómo construimos un modelo relacional y cómo hacemos consultas SQL",
+    "texto": "A partir de una necesidad funcional, cómo construir un modelo relacional y cómo hacer consultas SQL",
     "fecha": "04/10/2021",
     "tecnologias": ["SQL"]
   },
