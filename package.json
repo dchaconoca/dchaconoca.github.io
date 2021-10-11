@@ -52,5 +52,18 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "description": "## Project setup ``` npm install ```",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dchaconoca/portafolio-vue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dchaconoca/portafolio-vue/issues"
+  },
+  "homepage": "https://github.com/dchaconoca/portafolio-vue#readme"
 }
