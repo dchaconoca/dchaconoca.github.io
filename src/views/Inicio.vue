@@ -7,7 +7,8 @@
     <div class="textos">
       <h2>Desarrollo de software</h2>
       <p>(Aprendiendo Ciencia de Datos)</p>
-      <h3>Python - SQL - Javascript - HTML/CSS - VueJS</h3>
+      <h3>Python - SQL - Javascript - HTML/CSS</h3>
+      <h4>Flask -  Django - VueJS</h4>
     </div>
   </div>
 </template>
