@@ -5,7 +5,7 @@
     </div>
     <h1>Diana Chacón Ocariz</h1>
     <div class="textos">
-      <h2>Desarrollo de software - Nuevo</h2>
+      <h2>Desarrollo de software</h2>
       <p>(Aprendiendo Ciencia de Datos)</p>
       <h3>Python - SQL - Javascript - HTML/CSS</h3>
       <h4>Flask -  Django - VueJS</h4>

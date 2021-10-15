@@ -6,7 +6,6 @@
     </blockquote>
     <!-- <div v-html="contenido"/>    -->
     <p>
-      Es el modificado. 
       El <strong>Chez Diana</strong> o La Casa de Diana, es un proyecto que vio la luz en el 2009.
     </p>
     <p>
