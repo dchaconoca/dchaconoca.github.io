@@ -1,12 +1,7 @@
 [
-  {"nombreImg": "chezdiana/fruchetas.png",  "texto": "Domo de fruchetas"},
-  {"nombreImg": "chezdiana/sala.png",  "texto": "Sala Chez Diana"},
-  {"nombreImg": "chezdiana/cocina.png",  "texto": "Barra y cocina"},
-  {"nombreImg": "chezdiana/terraza.png",  "texto": "Terraza"},
-  {"nombreImg": "chezdiana/cake.png",  "texto": "Cake de vegetales y tocineta"},
-  {"nombreImg": "chezdiana/familia.png",  "texto": "Cocinando en familia"},
-  {"nombreImg": "chezdiana/pie.png",  "texto": "Pie de limón con su merengue"},
-  {"nombreImg": "chezdiana/ines.png",  "texto": "Pasión por lo bien hecho"},
-  {"nombreImg": "chezdiana/pollo.png",  "texto": "Pollo piña colada"},
-  {"nombreImg": "chezdiana/logo-cd.png",  "texto": "Chez Diana"}
+  {"nombreImg": "chezdiana/fruchetas.webp",  "texto": "Domo de fruchetas"},
+  {"nombreImg": "chezdiana/sala.webp",  "texto": "Sala Chez Diana"},
+  {"nombreImg": "chezdiana/cocina.webp",  "texto": "Barra y cocina"},
+  {"nombreImg": "chezdiana/terraza.webp",  "texto": "Terraza"},
+  {"nombreImg": "chezdiana/logo-cd.webp",  "texto": "Chez Diana"}
 ]

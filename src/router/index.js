@@ -1,47 +1,40 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Inicio from '../views/Inicio.vue'
-import Acerca from '../views/Acerca.vue'
-import Proyectos from '../views/Proyectos.vue'
-import DetalleProyectos from '../views/DetalleProyectos.vue'
-import ChezDiana from '../views/ChezDiana.vue'
-import Blog from '../views/Blog.vue'
-import DetallePosts from '../views/DetallePosts.vue'
 
 const routes = [
   {
     path: '/',
     name: 'Inicio',
-    component: Inicio
+    component: () => import('../views/Inicio.vue')
   },
   {
     path: '/acerca',
     name: 'Acerca',
-    component: Acerca
+    component: () => import('../views/Acerca.vue')
   },
   {
     path: '/proyectos',
     name: 'Proyectos',
-    component: Proyectos
+    component: () => import('../views/Proyectos.vue')
   },
   {
     path: '/proyectos/:id',
     name: 'DetalleProyectos',
-    component: DetalleProyectos
+    component: () => import('../views/DetalleProyectos.vue')
   },
   {
     path: '/chez-diana',
     name: 'ChezDiana',
-    component: ChezDiana
+    component: () => import('../views/ChezDiana.vue')
   },
   {
     path: '/blog',
     name: 'Blog',
-    component: Blog
+    component: () => import('../views/Blog.vue')
   },
   {
     path: '/blog/:id',
     name: 'DetallePosts',
-    component: DetallePosts
+    component: () => import('../views/DetallePosts.vue')
   }
 ]
 

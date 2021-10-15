@@ -278,9 +278,8 @@
   .markdown-body pre {
 	font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
 	font-size: 12px;
-	color: var(--gris-claro);
-	background-color: var(--gris-oscuro);
-   	border-radius: 6px;
+	background-color: var(--gris-claro);
+  border-radius: 6px;
   }
   
   .markdown-body pre {
@@ -653,9 +652,8 @@
   
   .markdown-body blockquote {
 	padding: 0 1em;
-	color: #6a737d;
 	border-left: .25em solid #dfe2e5;
-	background-color: var(--gris-oscuro);
+	background-color: var(--gris-claro);
   }
   
   .markdown-body blockquote>:first-child {
@@ -806,11 +804,10 @@
 	padding: 0;
 	margin: 0;
 	font-size: 100%;
-	color: var(--gris-claro);
 	word-break: normal;
 	white-space: pre;
-	background-color: var(--gris-oscuro);
-    border-radius: 6px;
+	background-color: var(--gris-claro);
+  border-radius: 6px;
   }
   
   .markdown-body .highlight {
@@ -827,10 +824,9 @@
 	padding: 16px;
 	overflow: auto;
 	font-size: 85%;
-	color: var(--gris-claro);
 	line-height: 1.45;
-	background-color: var(--gris-oscuro);
-    border-radius: 6px;
+	background-color: var(--gris-claro);
+  border-radius: 6px;
   }
   
   .markdown-body pre code {
@@ -841,9 +837,8 @@
 	overflow: visible;
 	line-height: inherit;
 	word-wrap: normal;
-	background-color: var(--gris-oscuro);
-    border-radius: 6px;
-	color: var(--gris-claro);
+	background-color: var(--gris-claro);
+  border-radius: 6px;
   }
   
   .markdown-body .commit-tease-sha {

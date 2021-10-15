@@ -27,6 +27,7 @@ Esta aplicación permite la gestión de recetas de cocina y consta de 2 partes:
 ## Tecnologías y modelos utilizados:
 
 - *Flask (Python)*
+- *PostgreSQL*
 - *SQL*
 - *SQLAlchemy*
 - *Jinja / Bootstrap*
