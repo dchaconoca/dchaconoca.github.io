@@ -1,5 +1,7 @@
 <template>
   <div class="blog">
+    <h1>Blog</h1>
+    <h3>Artículos sobre desarrollo de software y algo más</h3>
     <div v-for="post in posts" :key="post.id">
       <TarjetaArt :articulo="post" class="art-blog" />
     </div>
