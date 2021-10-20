@@ -9,7 +9,7 @@
 import marked from "marked";
 import ESsymbols from "/src/views/blog/ES/ES-symbols.md";
 import ESsql1 from "/src/views/blog/ES/ES-sql.md";
-import ESsql2 from "/src/views/blog/ES/ES-sql.md";
+import ESsql2 from "/src/views/blog/ES/ES-sql2.md";
 
 export default {
   name: 'DetallePost',
@@ -20,9 +20,9 @@ export default {
   },
   created() {
     let recursos = {
-      'sql1': ESsql1,
-      'sql2': ESsql2,
-      'symbols': ESsymbols,
+      'consultas-sql-1': ESsql1,
+      'consultas-sql-2': ESsql2,
+      'symbols-javascript': ESsymbols,
     }
 
     this.markdown = recursos[this.$route.params.id];
@@ -47,5 +47,11 @@ export default {
     margin: auto;
 		display: block;
     padding: 2%;
+  }
+
+  .titulo-img {
+    font-size: 1rem;
+    font-style: bold;
+    text-align: center;
   }
 </style>

@@ -1,23 +1,20 @@
 # Símbolos
 
 ### Definición
-    • Tipo de dato primitivo como string, number, boolean, null y undefined
-    • Valores únicos e immutables, es decir, la función Symbol() permite obtener identificadores únicos y diferentes a los ya creados y a los por crear
-    • Se les puede agregar una descripción que facilite su identificación (recomendado)
+- Tipo de dato primitivo como string, number, boolean, null y undefined
+- Valores únicos e immutables, es decir, la función Symbol() permite obtener identificadores únicos y diferentes a los ya creados y a los por crear
+- Se les puede agregar una descripción que facilite su identificación (recomendado)
     
 ### Otras características
-    • Se debe utilizar Objeto.getOwnPropertySymbols() para poder enumerar las propiedades 
-    de un objeto cuyas claves son Symbol
-    • No sufren “casting ” de tipos (no se convierten implícitamente en otro tipo como string)
+- Se debe utilizar Objeto.getOwnPropertySymbols() para poder enumerar las propiedades 
+de un objeto cuyas claves son Symbol
+- No sufren “casting ” de tipos (no se convierten implícitamente en otro tipo como string)
     
 ### Usos
-    • Los valores únicos que se producen con Symbol() pueden ser utilizados como claves (keys)   de los objetos y así poder crear nuevas propiedades sin que éstas entren en 
-    conflicto con las existentes. Ésto es particularmente útil cuando se habla de objetos “grandes” como el objeto global Wnindow
-    • Evita la sobreescritura de propiedades y métodos ya existentes
-    • Como las propiedades con claves Symbol() no son enumeradas por Objeto.keys u Objeto.
-    getOwnPropertyNames, pueden utilizarse para definir propiedades privadas
-    • Pueden utilizarse para definir una lista de constantes, ejemplo una lista de 
-    descripciones de errores
+- Los valores únicos que se producen con Symbol() pueden ser utilizados como claves (keys) de los objetos y así poder crear nuevas propiedades sin que éstas entren en conflicto con las existentes. Ésto es particularmente útil cuando se habla de objetos “grandes” como el objeto global Wnindow
+- Evita la sobreescritura de propiedades y métodos ya existentes
+- Como las propiedades con claves Symbol() no son enumeradas por Objeto.keys u Objeto getOwnPropertyNames, pueden utilizarse para definir propiedades privadas
+- Pueden utilizarse para definir una lista de constantes, ejemplo una lista de descripciones de errores
 
 ### Propiedades y métodos
 
@@ -47,10 +44,12 @@
 
 #### Declaración
 ```
-// Se ejecuta la función Symbol con una descripción que sirve de referencia
+// Se ejecuta la función Symbol con una 
+// descripción que sirve de referencia
 let simbolo = Symbol("descripcion");
 
-// Cada ejecución de la función devuelve un valor distinto
+// Cada ejecución de la función devuelve 
+// un valor distinto
 let x = Symbol("coordenada");
 let y = Symbol("coordenada");
 console.log(x === y); // false
@@ -90,15 +89,18 @@ class Transporte {
   constructor(tipo) {
     switch(tipo) {
       case VAN:
-        this.capacidad = 300; //Furgoneta 300 kilos max
+        //Furgoneta 300 kilos max
+        this.capacidad = 300; 
         this.nombre = "Van";
         break;
       case TRUCK:
-        this.capacidad = 1200; //Camión 1200 kilos max
+        //Camión 1200 kilos max
+        this.capacidad = 1200; 
         this.nombre = "Truck";
         break;
       case FERRY:
-        this.capacidad = 5000; //Furgoneta 5000 kilos max
+        //Furgoneta 5000 kilos max
+        this.capacidad = 5000; 
         this.nombre = "Ferry";
         break;
       default:
@@ -106,7 +108,7 @@ class Transporte {
     }
   }
   toString() {
-    return `Transport type ${this.nombre} with capacity ${this.capacidad}`;
+    return `Transporte ${this.nombre} capacidad ${this.capacidad}`;
   }
 }
 ```
@@ -122,9 +124,12 @@ let map = {
     [hasOwnProperty]: "Símbolo"
 }
 
-console.log(map[hasOwnProperty]); // "Símbolo"
-console.log(typeof map[hasOwnProperty]); // String
-console.log(map.hasOwnProperty("prop1")); // Lamado de la función hasOwnProperty, devuelve true
+// "Símbolo"
+console.log(map[hasOwnProperty]); 
+// String
+console.log(typeof map[hasOwnProperty]); 
+// Lamado de la función hasOwnProperty, devuelve true
+console.log(map.hasOwnProperty("prop1")); 
 ```
 
 #### Symbol.iterator
