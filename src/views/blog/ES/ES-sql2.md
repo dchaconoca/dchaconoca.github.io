@@ -34,7 +34,7 @@ Se trata de una base de datos relacional que almacena información sobre bancos,
 Un banco posee n clientes. Un cliente puede realizar varias transacciones en varios bancos. Se trata de una relación “muchos a muchos” que se traduce en 3 tablas a nivel de la base de datos:
 
 <figure>
-    <img class="img-art" src="../../../assets/img/blog/ER-Banco.png" alt="Vista del web site">
+    <img class="img-art" src="../../../assets/img/blog/ER-banco.png" alt="Clientes y sus transacciones bancarias">
     <figcaption class="titulo-img">Clientes y sus transacciones bancarias</figcaption>
 </figure>
 

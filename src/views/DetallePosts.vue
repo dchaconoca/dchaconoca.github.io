@@ -44,6 +44,7 @@ export default {
    
 
   .img-art {
+    width: 230px;
     margin: auto;
 		display: block;
     padding: 2%;
@@ -53,5 +54,11 @@ export default {
     font-size: 1rem;
     font-style: bold;
     text-align: center;
+  }
+
+   @media (min-width: 576px) { 
+   .img-art {
+      width: 450px;
+    }
   }
 </style>

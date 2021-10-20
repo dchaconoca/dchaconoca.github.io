@@ -40,24 +40,24 @@ Una entidad está descrita y se representa por sus características o atributos.
 
 Algunos ejemplos de modelos ER y su representación gráfica:
 
-1. Una *Persona* vive en una *Casa*. Hay casas que pueden estar desocupadas
+1. Una *Persona* *vive en* una *Casa*. Hay casas que pueden estar desocupadas
 
 <figure>
-    <img class="img-art" src="../../../assets/img/proyectos/logo-manapro.png" alt="Vista del web site">
+    <img class="img-art" src="../../../assets/img/blog/ER-casa.png" alt="Modelo ER Persona - Casa">
     <figcaption class="titulo-img">Modelo ER Persona - Casa</figcaption>
 </figure>
    
-2. El *Artículo* de un blog posee un *Autor*. Un Autor puede escribir muchos Artículos
+2. El *Artículo* de un blog *es ecrito* por un *Autor*. Un Autor puede escribir muchos Artículos
 
 <figure>
-    <img class="img-art" src="../../../assets/img/proyectos/logo-manapro.png" alt="Vista del web site">
+    <img class="img-art" src="../../../assets/img/blog/ER-articulo.png" alt="Modelo ER Artículo - Autor">
     <figcaption class="titulo-img">Modelo ER Artículo - Autor</figcaption>
 </figure>
 
-3. Una *Receta* de cocina contiene varios ingredientes. Un mismo *Ingrediente* puede formar parte de varias Recetas
+3. Una *Receta* de cocina *contiene* varios ingredientes. Un mismo *Ingrediente* puede formar parte de varias Recetas
 
 <figure>
-    <img class="img-art" src="../../../assets/img/proyectos/logo-manapro.png" alt="Vista del web site">
+    <img class="img-art" src="../../../assets/img/blog/ER-receta.png" alt="Modelo ER Receta - Ingrediente">
     <figcaption class="titulo-img">Modelo ER Receta - Ingrediente</figcaption>
 </figure>
 
@@ -80,11 +80,20 @@ En cuanto a las relaciones del modelo ER, las tratamos según su tipo:
 
 Así, al traducir los ejemplos anteriores, obtenemos los siguientes esquemas a nivel de bases de datos:
 
-<img class="img-art" src="../../../assets/img/proyectos/logo-manapro.png" alt="Vista del web site">
+<figure>
+    <img class="img-art" src="../../../assets/img/blog/BD-casa.png" alt="Tablas base Casas">
+    <figcaption class="titulo-img">Tablas base Casas</figcaption>
+</figure>
 
-<img class="img-art" src="../../../assets/img/proyectos/logo-manapro.png" alt="Vista del web site">
+<figure>
+    <img class="img-art" src="../../../assets/img/blog/BD-articulo.png" alt="Tablas base Artículos">
+    <figcaption class="titulo-img">Tablas base Artículos</figcaption>
+</figure>
 
-<img class="img-art" src="../../../assets/img/proyectos/logo-manapro.png" alt="Vista del web site">
+<figure>
+    <img class="img-art" src="../../../assets/img/blog/BD-receta.png" alt="Tablas base Recetas">
+    <figcaption class="titulo-img">Tablas base Recetas</figcaption>
+</figure>
 
 ## Y en la práctica ¿cómo hacemos?
 
