@@ -41,7 +41,10 @@ export default {
   
    @import '../assets/css/markdown.css';
    @import '../assets/css/responsive.css';
-   
+
+  figure {
+    text-align: center;
+  }
 
   .img-art {
     width: 230px;

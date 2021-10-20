@@ -81,17 +81,17 @@ En cuanto a las relaciones del modelo ER, las tratamos según su tipo:
 Así, al traducir los ejemplos anteriores, obtenemos los siguientes esquemas a nivel de bases de datos:
 
 <figure>
-    <img class="img-art" src="../../../assets/img/blog/BD-casa.png" alt="Tablas base Casas">
+    <img src="../../../assets/img/blog/BD-casa.png" alt="Tablas base Casas">
     <figcaption class="titulo-img">Tablas base Casas</figcaption>
 </figure>
 
 <figure>
-    <img class="img-art" src="../../../assets/img/blog/BD-articulo.png" alt="Tablas base Artículos">
+    <img src="../../../assets/img/blog/BD-articulo.png" alt="Tablas base Artículos">
     <figcaption class="titulo-img">Tablas base Artículos</figcaption>
 </figure>
 
 <figure>
-    <img class="img-art" src="../../../assets/img/blog/BD-receta.png" alt="Tablas base Recetas">
+    <img src="../../../assets/img/blog/BD-receta.png" alt="Tablas base Recetas">
     <figcaption class="titulo-img">Tablas base Recetas</figcaption>
 </figure>
 
