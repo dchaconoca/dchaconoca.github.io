@@ -43,7 +43,17 @@ export default {
       return {
         show: false
       }
-  },
+  }
+  // beforeRouteUpdate (to, from, next)  {
+  //   console.log("cambio")
+  //   console.log(to, from, next)  
+  // }
+  // watch: {
+  //   $route(to, from) {
+  //     tamano = this.window.width
+  //     console.log(tamano)
+  //   }
+  // }
 }
 </script>
 

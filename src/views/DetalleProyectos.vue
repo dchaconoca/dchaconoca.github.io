@@ -29,8 +29,6 @@ export default {
       'website': ESwebsite,
     }
 
-    console.log(recursos[this.$route.params.id])
-
     this.markdown = recursos[this.$route.params.id];
   },
   computed: {
@@ -43,14 +41,9 @@ export default {
 
 <style>
 
+  @import '../assets/css/markdown.css';
+  @import '../assets/css/imagenes.css';
   @import '../assets/css/responsive.css';
-
-  .img-art {
-    width: 300px;
-    height: auto;
-    border-radius: 1%;
-    margin: 2%;
-  }
 
   .icono {
     width: 30px;

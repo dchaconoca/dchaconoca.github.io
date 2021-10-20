@@ -1,10 +1,13 @@
 # Scraping de una página de precios
 
-<img class="img-art" src="../../../assets/img/proyectos/scraping.png" alt="Logo Python BeautifulSoup">
+<figure>
+    <img class="img-art" src="../../../assets/img/proyectos/beautifulsoup.png" alt="Logo Python BeautifulSoup">
+    <figcaption class="titulo-img">Python BeautifulSoup</figcaption>
+</figure>
 
 <div class="link-gh">
     <strong>Ver código aquí:</strong>
-    <a href="https://github.com/dchaconoca/web-scraping-precios" target="_blank" title="Ir a proyecto en GitHub"><i class="fab fa-github-square"></i><a>
+    <a href="https://github.com/dchaconoca/web-scraping-precios" target="_blank" title="Ir a proyecto en GitHub"><i class="fab fa-github-square"></i></a>
 </div>
 <br>
 Uno de los principales problemas de la aplicación de Recetas, es la actulización de precios de los ingredientes.

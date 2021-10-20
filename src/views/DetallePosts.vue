@@ -40,28 +40,7 @@ export default {
   /* Se pueden escribir etiquetas html directamente en el documento markdown y agregar clases css */
   
    @import '../assets/css/markdown.css';
+   @import '../assets/css/imagenes.css';
    @import '../assets/css/responsive.css';
 
-  figure {
-    text-align: center;
-  }
-
-  .img-art {
-    width: 230px;
-    margin: auto;
-		display: block;
-    padding: 2%;
-  }
-
-  .titulo-img {
-    font-size: 1rem;
-    font-style: bold;
-    text-align: center;
-  }
-
-   @media (min-width: 576px) { 
-   .img-art {
-      width: 450px;
-    }
-  }
 </style>

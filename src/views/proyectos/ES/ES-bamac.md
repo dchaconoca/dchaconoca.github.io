@@ -1,7 +1,9 @@
 # Experiencia Profesional en PSA Peugeot-Citröen
 
-<img class="img-art" src="../../../assets/img/proyectos/logo-psa.jpg" alt="Vista del web site">
-
+<figure>
+    <img class="img-art" src="../../../assets/img/proyectos/logo-psa.jpg" alt="Logo PSA">
+    <figcaption class="titulo-img">PSA Peugeot-Citröen</figcaption>
+</figure>
 
 ## Jefe de Proyectos de la aplicación BAMAC (Base de Datos Marketing Clientes)
 

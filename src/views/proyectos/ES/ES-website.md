@@ -1,10 +1,13 @@
 # Mi web site personal
 
-<img class="img-art" src="../../../assets/img/proyectos/site.png" alt="Vista del web site">
+<figure>
+    <img class="img-art" src="../../../assets/img/proyectos/site.png" alt="Vista del web site">
+    <figcaption class="titulo-img">Sitio web personal</figcaption>
+</figure>
 
 <div class="link-gh">
     <strong>Ver código aquí:</strong>
-    <a href="https://github.com/dchaconoca/portafolio-vue" target="_blank" title="Ir a proyecto en GitHub"><i class="fab fa-github-square"></i><a>
+    <a href="https://github.com/dchaconoca/portafolio-vue" target="_blank" title="Ir a proyecto en GitHub"><i class="fab fa-github-square"></i></a>
 </div>
 <br>
 Sitio web que tiene como objetivo mostrar quién soy y mi experiencia como profesional en diversas áreas. 

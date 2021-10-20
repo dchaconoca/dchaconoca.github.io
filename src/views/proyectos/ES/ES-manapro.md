@@ -1,7 +1,9 @@
 # Experiencia Profesional en Manapro
 
-<img class="img-art" src="../../../assets/img/proyectos/logo-manapro.png" alt="Vista del web site">
-
+<figure>
+    <img class="img-art" src="../../../assets/img/proyectos/manapro.jpeg" alt="Manapro Consultores C.A">
+    <figcaption class="titulo-img">Manapro Consultores C.A.</figcaption>
+</figure>
 
 ## Analista de Control de Calidad y Estándares
 
