@@ -47,7 +47,7 @@ Algunos ejemplos de modelos ER y su representación gráfica:
     <figcaption class="titulo-img">Modelo ER Persona - Casa</figcaption>
 </figure>
    
-1. El *Artículo* de un blog posee un *Autor*. Un Autor puede escribir muchos Artículos
+2. El *Artículo* de un blog posee un *Autor*. Un Autor puede escribir muchos Artículos
 
 <figure>
     <img class="img-art" src="../../../assets/img/proyectos/logo-manapro.png" alt="Vista del web site">

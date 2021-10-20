@@ -59,9 +59,9 @@ Como son los primeros ejercicios, podemos guiarnos por la tabla de preguntas, co
 La consulta resultante es entonces:
 
 ```
-SELECT name, taxNumber 
-FROM Clients
-ORDER BY taxNumber
+  SELECT name, taxNumber 
+  FROM Clients
+  ORDER BY taxNumber
 ```
 No tenemos que aplicar ninguna condición WHERE porque queremos todos los registros. Por defecto el orden es ascendente, por eso tampoco hay necesidad de especificarlo.
 
@@ -79,12 +79,11 @@ El saldo total no se guarda en la base, porque cambia constantemente. Así que d
 - ¿Cuál será el orden del resultado?  **ORDER BY sum(ac.balance) DESC** 
 
 ```
-SELECT cl.id, cl.name, 
-  sum(ac.balance)
-FROM Clients cl JOIN Accounts ac 
-  ON cl.id = ac.clientId
-GROUP BY cl.id  
-ORDER BY sum(ac.balance) DESC
+  SELECT cl.id, cl.name, sum(ac.balance)
+  FROM Clients cl JOIN Accounts ac 
+    ON cl.id = ac.clientId
+  GROUP BY cl.id  
+  ORDER BY sum(ac.balance) DESC
 ```
 
 ### Ejercicio 3: Bancos con sus clientes y sus taxNumber ordenados por nombre del banco y nombre de los clientes 
@@ -97,14 +96,12 @@ En este caso, necesitamos información de las 3 tablas. Utilizamos **DISTINCT**,
 - ¿Cuál será el orden del resultado?  **ORDER BY bk.name, cl.name** 
 
 ```
-SELECT DISTINCT bk.name, 
-  cl.name, 
-  cl.taxNumber
-FROM Banks bk JOIN Accounts ac 
-  ON bk.id = ac.bankId 
-JOIN Clients cl 
-  ON cl.id = ac.clientId
-ORDER BY bk.name, cl.name
+  SELECT DISTINCT bk.name, cl.name, cl.taxNumber
+  FROM Banks bk JOIN Accounts ac 
+    ON bk.id = ac.bankId 
+  JOIN Clients cl 
+    ON cl.id = ac.clientId
+  ORDER BY bk.name, cl.name
 ```
 
 ### Ejercicio 4: Clientes del banco Santander con un saldo mayor a 25000 ordenados por saldo decreciente 
@@ -122,15 +119,13 @@ Para facilitar la consulta, utilizamos directamente el ID del banco Santander (a
 - ¿Cuál será el orden del resultado?  **ORDER BY sum(ac.balance) DESC** 
 
 ```
-SELECT cl.id, 
-  cl.name, 
-  sum(ac.balance)
-FROM Clients cl JOIN Accounts ac 
-  ON cl.id = ac.clientId
-WHERE ac.bankId = 1
-GROUP BY cl.id 
-HAVING sum(ac.balance) >= 25000
-ORDER BY sum(ac.balance) DESC
+  SELECT cl.id, cl.name, sum(ac.balance)
+  FROM Clients cl JOIN Accounts ac 
+    ON cl.id = ac.clientId
+  WHERE ac.bankId = 1
+  GROUP BY cl.id 
+  HAVING sum(ac.balance) >= 25000
+  ORDER BY sum(ac.balance) DESC
 ```
 
 **¡Atención!** Lo más importante de esta consulta, es aprender la diferencia entre **WHERE** y **HAVING**. Las 2 cláusulas permiten indicar condiciones o filtros sobre los registros, sin embargo, *WHERE* se aplica directamente a los registros de las tablas, pero *HAVING* sirve para aplicar condiciones sobre las columnas calculadas.
@@ -146,13 +141,11 @@ Esta consulta es muy similar a la ya realizada para obtener el saldo total de ca
 - ¿Cuál será el orden del resultado?  **ORDER BY sum(ac.balance)** 
 
 ```
-SELECT bk.id, 
-  bk.name, 
-  sum(ac.balance)
-FROM Banks bk JOIN Accounts ac 
-  ON bk.id = ac.bankId
-GROUP BY bk.id
-ORDER BY sum(ac.balance) 
+  SELECT bk.id, bk.name, sum(ac.balance)
+  FROM Banks bk JOIN Accounts ac 
+    ON bk.id = ac.bankId
+  GROUP BY bk.id
+  ORDER BY sum(ac.balance) 
 ```
 
 ### Ejercicio 6: Bancos y sus clientes con el saldo total de cada uno 
@@ -160,14 +153,12 @@ ORDER BY sum(ac.balance)
 Aquí unimos lo ya realizado en los ejercicios 2 y 5. 
 
 ```
-SELECT bk.name, 
-  cl.name, 
-  sum(ac.balance)
-FROM Banks bk JOIN Accounts ac 
-  ON bk.id = ac.bankId
-JOIN Clients cl 
-  ON ac.clientId = cl.id 
-GROUP BY bk.name, cl.name
+  SELECT bk.name, cl.name, sum(ac.balance)
+  FROM Banks bk JOIN Accounts ac 
+    ON bk.id = ac.bankId
+  JOIN Clients cl 
+    ON ac.clientId = cl.id 
+  GROUP BY bk.name, cl.name
 ```
 
 ### Ejercicio 7: Bancos con la cantidad de clientes que solo tienen cuenta en ese banco
@@ -175,14 +166,12 @@ GROUP BY bk.name, cl.name
 Para cada banco, contamos la cantidad de clientes distintos que tiene. Excluimos los clientes que tienen cuenta en otro banco (NOT IN subconsulta).
 
 ```
-SELECT ac.bankId, 
-  count(DISTINCT ac.clientId)
-FROM Accounts ac
-WHERE ac.clientId NOT IN 
-  (SELECT ac2.clientId 
-  FROM Accounts ac2 
-  WHERE ac.bankId <> ac2.bankId)
-GROUP BY ac.bankId
+  SELECT ac.bankId, count(DISTINCT ac.clientId)
+  FROM Accounts ac
+  WHERE ac.clientId NOT IN 
+    (SELECT ac2.clientId FROM Accounts ac2 
+    WHERE ac.bankId <> ac2.bankId)
+  GROUP BY ac.bankId
 ```
 
 Analicemos la subconsulta: Estamos buscando los clientes que tienen transacciones en otro banco que no sea el banco de la consulta principal, eso es lo que expresamos con la cláusula **WHERE ac.bankId <> ac2.bankId**. Luego, en la consulta principal, excluimos todos los clientes encontrados en la subconsulta.
@@ -190,14 +179,13 @@ Analicemos la subconsulta: Estamos buscando los clientes que tienen transaccione
 Puedes utilizar la siguiente consulta para identificar los clientes que solo tienen una cuenta en un banco:
 
 ```
-SELECT ac.bankId, 
-  ac.clientId
-FROM Accounts ac
-WHERE ac.clientId NOT IN 
-  (SELECT ac2.clientId 
-  FROM Accounts ac2 
-  WHERE ac.bankId <> ac2.bankId)
-GROUP BY ac.bankId
+  SELECT ac.bankId, ac.clientId
+  FROM Accounts ac
+  WHERE ac.clientId NOT IN 
+    (SELECT ac2.clientId 
+    FROM Accounts ac2 
+    WHERE ac.bankId <> ac2.bankId)
+  GROUP BY ac.bankId
 ```
 
 ### Ejercicio 8: Bancos con el cliente de menor saldo 
@@ -213,19 +201,16 @@ Podemos utilizar una consulta con una subconsulta. La subconsulta nos devuelve l
 Luego, la consulta principal selecciona el cliente con el saldo más pequeño (**min(total)**).
 
 ```
-SELECT bk.name, 
-  cl.name, 
-  min(total)
-FROM Banks bk JOIN 
-  (SELECT ac.bankId AS bankId, 
-    ac.clientId AS clientId, 
-    sum(ac.balance) AS total
-  FROM Accounts ac
-  GROUP BY ac.bankId, ac.clientId) 
-ON bk.id = bankId 
-JOIN Clients cl 
-  ON clientId = cl.id
-GROUP BY bankId 
+  SELECT bk.name, cl.name, min(total)
+  FROM Banks bk JOIN 
+    (SELECT ac.bankId AS bankId, 
+      ac.clientId AS clientId, 
+      sum(ac.balance) AS total
+    FROM Accounts ac
+    GROUP BY ac.bankId, ac.clientId) 
+  ON bk.id = bankId 
+  JOIN Clients cl ON clientId = cl.id
+  GROUP BY bankId 
 ```
 
 En este caso, la subconsulta la asimilamos a una tabla, por eso la incluimos en un JOIN.
@@ -235,19 +220,16 @@ En este caso, la subconsulta la asimilamos a una tabla, por eso la incluimos en 
 Otra solución es crear una **Vista** con la subconsulta y luego utilizarla dentro de la consulta principal.
 
 ```
-CREATE VIEW TotalBalanceBankClient AS
-  SELECT ac.bankId AS bankId, 
-    ac.clientId AS clientId,
-    sum(ac.balance) AS total
+  CREATE VIEW TotalBalanceBankClient AS
+  SELECT ac.bankId AS bankId, ac.clientId AS clientId, sum(ac.balance) AS total
   FROM Accounts ac
   GROUP BY ac.bankId, ac.clientId
 ```
 ```
-SELECT bk.name, cl.name, min(tb.total)
-FROM Banks bk JOIN TotalBalanceBankClient tb 
-  ON bk.id = tb.bankId 
-JOIN Clients cl ON tb.clientId = cl.id
-GROUP BY tb.bankId 
+  SELECT bk.name, cl.name, min(tb.total)
+  FROM Banks bk JOIN TotalBalanceBankClient tb ON bk.id = tb.bankId 
+  JOIN Clients cl ON tb.clientId = cl.id
+  GROUP BY tb.bankId 
 ```
 
 Las vistas son una especie de tablas virtuales que se crean a partir de una consulta SQL. Tienen la ventaja de facilitar la escritura de consultas complejas, haciéndolas más lisibles, comprensibles y reutilizables en varias consultas.

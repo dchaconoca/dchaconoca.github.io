@@ -1,4 +1,8 @@
- 
+ .markdown-body {
+   width: 90%;
+   margin-bottom: 5%;
+ }
+
   .markdown-body h1 {
 	font-size: 2em;
 	margin: .67em 0;
@@ -272,10 +276,10 @@
 	padding: 16px;
 	font-size: 85%;
 	line-height: 1.45;
-	background-color: var(--gris-claro);
+	background-color: var(--rojo);
   border-radius: 6px;
   overflow-x: auto;
-  width: 95%;
+  width: 70%;
   }
   
   .markdown-body pre code {
