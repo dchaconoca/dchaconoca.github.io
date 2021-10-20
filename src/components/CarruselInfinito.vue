@@ -45,7 +45,7 @@
       imagenes: Array
     },
     updated() {
-      gsap.fromTo(".tarjeta-carrusel", {duration: 2, opacity: 0}, {duration: 2, opacity: 1});
+      gsap.fromTo(".tarjeta-carrusel", {opacity: 0}, {duration: 1.5, opacity: 1});
     },
     computed: {
       imagenActual() {
