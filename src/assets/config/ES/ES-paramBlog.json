@@ -1,20 +1,20 @@
 [
   {
-    "id": "consultas-sql-1",
-    "imagen": "blog/sql.png",
+    "id": "como-construir-modelo-er",
+    "imagen": "blog/relacional.png",
     "txtImg": "SQL",
     "enlace": "/blog/",
-    "titulo": "¿Cómo hacer consultas con SQL? Construyendo tu base de datos", 
-    "texto": "A partir de una necesidad funcional, cómo construir un modelo relacional y cómo hacer consultas SQL",
+    "titulo": "¿Cómo construir tu base de datos relacional?", 
+    "texto": "A partir de una necesidad funcional, cómo construir un Modelo Entidad-Relación y cómo llevarlo a tablas de una base de datos relacional",
     "fecha": "20/10/2021",
     "tecnologias": ["SQL"]
   },
   {
-    "id": "consultas-sql-2",
-    "imagen": "blog/sql.png",
+    "id": "como-hacer-consultas-sql",
+    "imagen": "blog/sql2.png",
     "txtImg": "SQL",
     "enlace": "/blog/",
-    "titulo": "¿Cómo hacer consultas con SQL? Ejemplos de consultas", 
+    "titulo": "¿Cómo hacer consultas con SQL?", 
     "texto": "Ejemplos de cómo hacer consultas SQL a partir de preguntas funcionales",
     "fecha": "20/10/2021",
     "tecnologias": ["SQL"]

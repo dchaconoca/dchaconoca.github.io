@@ -20,8 +20,8 @@ export default {
   },
   created() {
     let recursos = {
-      'consultas-sql-1': ESsql1,
-      'consultas-sql-2': ESsql2,
+      'como-construir-modelo-er': ESsql1,
+      'como-hacer-consultas-sql': ESsql2,
       'symbols-javascript': ESsymbols,
     }
 

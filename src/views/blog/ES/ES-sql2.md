@@ -1,4 +1,4 @@
-# ¿Cómo hacer consultas con SQL? Parte II: Ejemplos de consultas
+# ¿Cómo hacer consultas con SQL?
 
 Cuando tienes una base de datos relacional y deseas hacer una consulta, debes utilizar la instrucción **SELECT**.
 
@@ -14,13 +14,13 @@ La instrucción **SELECT** está formada por varias partes o cláusulas, algunas
 
 En resumen, al construir una consulta SELECT, puedes guiarte por las siguientes preguntas:
 
-- ¿Qué información necesito?: **SELECT** 
-- ¿En cuál(es) tabla(s) se encuentra?: **FROM** 
-- ¿Qué condiciones deben cumplir los registros? *WHERE* 
-- ¿Por cuál información voy a agrupar los datos? *GROUP BY*
-- ¿Qué condición deben cumplir los datos agrupados? *HAVING* 
-- ¿Cuál será el orden del resultado? *ORDER BY* 
-- ¿Cuántos registros necesito? *LIMIT*
+- **¿Qué información necesito?:** **SELECT** 
+- **¿En cuál(es) tabla(s) se encuentra?:** **FROM** 
+- **¿Qué condiciones deben cumplir los registros?** *WHERE* 
+- **¿Por cuál información voy a agrupar los datos?** *GROUP BY*
+- **¿Qué condición deben cumplir los datos agrupados?** *HAVING* 
+- **¿Cuál será el orden del resultado?** *ORDER BY* 
+- **¿Cuántos registros necesito?** *LIMIT*
 
 
 ## Caso de estudio: Clientes bancarios y sus cuentas
@@ -40,11 +40,11 @@ Un banco posee n clientes. Un cliente puede realizar varias transacciones en var
 
 Tener conocimiento del esquema de la base de datos, facilita la escritura de las consultas, pues tienes más claro la información que está almacenada, en cuáles tablas debes buscarla, cuál es la relación entre las tablas…  Si no tienes un esquema de tu base de datos, puedes buscar en Google alguna herramienta que te lo genere. 
 
-Si deseas saber cómo se realiza un esquema de base de datos, te recomiendo la primera parte de este artículo [¿Cómo hacer consultas con SQL? Parte I: Construyendo tu base de datos](/blog/consultas-sql-1).
+Si deseas saber cómo se realiza un esquema de base de datos, te recomiendo mi artículo [¿Cómo construir tu base de datos relacional?](/blog/como-construir-modelo-er).
 
 Aunque el modelo del ejemplo es sencillo, permite realizar una serie de consultas bastante interesantes. Con cada nueva pregunta, iremos aumentando el grado de dificultad.
 
-Aquí en mi [Github](https://github.com/dchaconoca/SQLAlchemy-SQL) puedes descargar la base de datos SQLite para probar los ejemplos. También podrás encontrar allí mismo unos archivos JSON con los datos y una pequeña aplicación en Python que utiliza la librería SQLAlchemy para crear la base de datos e integrar los datos para la prueba.
+Aquí en mi <a href="https://github.com/dchaconoca/SQLAlchemy-SQL" target="_blank">Github</a> puedes descargar la base de datos SQLite para probar los ejemplos. También podrás encontrar allí mismo unos archivos JSON con los datos y una pequeña aplicación en Python que utiliza la librería SQLAlchemy para crear la base de datos e integrar los datos para la prueba.
 
 ¡Ahora sí! Vamos a aplicar la teoría que aprendimos más arriba.
 
@@ -52,9 +52,9 @@ Aquí en mi [Github](https://github.com/dchaconoca/SQLAlchemy-SQL) puedes descar
 
 Como son los primeros ejercicios, podemos guiarnos por la tabla de preguntas, con el tiempo y la práctica seguro lo harás mentalmente.
 
-- ¿Qué información necesito? **SELECT name, taxNumber** 
-- ¿En cuál(es) tabla(s) se encuentra? **FROM Clients** 
-- ¿Cuál será el orden del resultado? **ORDER BY taxNumber** 
+- **¿Qué información necesito?** SELECT name, taxNumber 
+- **¿En cuál(es) tabla(s) se encuentra?** FROM Clients 
+- **¿Cuál será el orden del resultado?** ORDER BY taxNumber 
 
 La consulta resultante es entonces:
 
@@ -73,10 +73,10 @@ El nombre del cliente lo encontramos en la tabla *Clients* pero el saldo lo enco
 El saldo total no se guarda en la base, porque cambia constantemente. Así que debemos calcularlo cada vez que lo necesitamos. Para eso, utilizamos la función **SUM**. Y como debemos hacer el cálculo para cada cliente, debemos indicarlo en la cláusula **GROUP BY**
 
 
-- ¿Qué información necesito?  **SELECT cl.id, cl.name, sum(ac.balance)** 
-- ¿En cuál(es) tabla(s) se encuentra?  **FROM Clients cl JOIN Accounts ac ON cl.id = ac.clientId** 
-- ¿Por cuál información voy a agrupar los datos?  **GROUP BY cl.id** 
-- ¿Cuál será el orden del resultado?  **ORDER BY sum(ac.balance) DESC** 
+- **¿Qué información necesito?**  SELECT cl.id, cl.name, sum(ac.balance) 
+- **¿En cuál(es) tabla(s) se encuentra?**  FROM Clients cl JOIN Accounts ac ON cl.id = ac.clientId 
+- **¿Por cuál información voy a agrupar los datos?**  GROUP BY cl.id 
+- **¿Cuál será el orden del resultado?** ORDER BY sum(ac.balance) DESC
 
 ```
 SELECT cl.id, cl.name, 
@@ -92,9 +92,9 @@ ORDER BY sum(ac.balance) DESC
 En este caso, necesitamos información de las 3 tablas. Utilizamos **DISTINCT**, de lo contrario obtendremos tantas líneas como registros hay en la tabla *Accounts*. Haz la prueba y verás.
 
 
-- ¿Qué información necesito?  **SELECT DISTINCT bk.name, cl.name, cl.taxNumber** 
-- ¿En cuál(es) tabla(s) se encuentra?  **FROM Banks bk JOIN Accounts ac ON bk.id = ac.bankId JOIN Clients cl ON cl.id = ac.clientId** 
-- ¿Cuál será el orden del resultado?  **ORDER BY bk.name, cl.name** 
+- **¿Qué información necesito?** SELECT DISTINCT bk.name, cl.name, cl.taxNumber 
+- **¿En cuál(es) tabla(s) se encuentra?** FROM Banks bk JOIN Accounts ac ON bk.id = ac.bankId JOIN Clients cl ON cl.id = ac.clientId 
+- **¿Cuál será el orden del resultado?**  ORDER BY bk.name, cl.name 
 
 ```
 SELECT DISTINCT bk.name, 
@@ -114,12 +114,12 @@ Primero que nada, debemos calcular el saldo total para cada cliente, como lo hic
 Para facilitar la consulta, utilizamos directamente el ID del banco Santander (ac.bankId = 1) en la cláusula **WHERE** para indicar que sólo queremos los clientes del banco Santander.
 
 
-- ¿Qué información necesito?  **SELECT cl.id, cl.name, sum(ac.balance)** 
-- ¿En cuál(es) tabla(s) se encuentra?  **FROM Clients cl JOIN Accounts ac ON cl.id = ac.clientId** 
-- ¿Qué condiciones deben cumplir los registros?  **WHERE ac.bankId = 1** 
-- ¿Por cuál información voy a agrupar los datos?  **GROUP BY cl.id** 
-- ¿Qué condición deben cumplir los datos agrupados?  **HAVING sum(ac.balance) >= 25000** 
-- ¿Cuál será el orden del resultado?  **ORDER BY sum(ac.balance) DESC** 
+- **¿Qué información necesito?**  SELECT cl.id, cl.name, sum(ac.balance) 
+- **¿En cuál(es) tabla(s) se encuentra?**  FROM Clients cl JOIN Accounts ac ON cl.id = ac.clientId 
+- **¿Qué condiciones deben cumplir los registros?**  WHERE ac.bankId = 1
+- **¿Por cuál información voy a agrupar los datos?**  GROUP BY cl.id 
+- **¿Qué condición deben cumplir los datos agrupados?**  HAVING sum(ac.balance) >= 25000 
+- **¿Cuál será el orden del resultado?**  ORDER BY sum(ac.balance) DESC 
 
 ```
 SELECT cl.id, 
@@ -140,10 +140,10 @@ ORDER BY sum(ac.balance) DESC
 
 Esta consulta es muy similar a la ya realizada para obtener el saldo total de cada cliente (ejercicio 2, pero en este caso, cambiamos la tabla *Clients* por la tabla *Banks*.
 
-- ¿Qué información necesito?  **SELECT bk.id, bk.name, sum(ac.balance)** 
-- ¿En cuál(es) tabla(s) se encuentra?  **FROM Banks bk JOIN Accounts ac ON bk.id = ac.bankId** 
-- ¿Por cuál información voy a agrupar los datos?  **GROUP BY bk.id** 
-- ¿Cuál será el orden del resultado?  **ORDER BY sum(ac.balance)** 
+- **¿Qué información necesito?**  SELECT bk.id, bk.name, sum(ac.balance) 
+- **¿En cuál(es) tabla(s) se encuentra?**  FROM Banks bk JOIN Accounts ac ON bk.id = ac.bankId 
+- **¿Por cuál información voy a agrupar los datos?**  GROUP BY bk.id 
+- **¿Cuál será el orden del resultado?**  ORDER BY sum(ac.balance) 
 
 ```
 SELECT bk.id, 
@@ -263,11 +263,11 @@ Conocer el esquema de una base de datos, te facilita la realización de consulta
 
 Aquí presentamos solo unos cuantos ejercicios, queda de tu parte seguir practicando y estudiando este maravilloso lenguaje. Aquí te dejo algunos cursos:
 
-- [W3School](https://www.w3schools.com/sql/default.asp)
-- [DataCamp](https://www.datacamp.com/search?q=&tab=courses&facets%5Btechnology%5D%5B%5D=SQL)
-- [PildorasInformaticas](https://www.youtube.com/playlist?list=PLU8oAlHdN5Bmx-LChV4K3MbHrpZKefNwn)
-- [SQL Murder Mystery](https://mystery.knightlab.com/)
+- <a href="https://www.w3schools.com/sql/default.asp" target="_blank">W3School</a>
+- <a href="https://www.datacamp.com/search?q=&tab=courses&facets%5Btechnology%5D%5B%5D=SQL" target="_blank">DataCamp</a>
+- <a href="https://www.youtube.com/playlist?list=PLU8oAlHdN5Bmx-LChV4K3MbHrpZKefNwn" target="_blank">PildorasInformaticas</a>
+- <a href="https://mystery.knightlab.com/" target="_blank">SQL Murder Mystery</a>
 
 ## Artículos relacionados: 
 
-[¿Cómo hacer consultas con SQL? Parte I: Construyendo tu base de datos](/blog/consultas-sql-1)
+[¿Cómo construir tu base de datos relacional?](/blog/como-construir-modelo-er)

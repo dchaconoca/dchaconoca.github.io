@@ -1,4 +1,4 @@
-# ¿Cómo hacer consultas con SQL? Parte I: Construyendo tu base de datos
+# ¿Cómo construir tu base de datos relacional?
 
 SQL (por sus siglas en inglés Structured Query Language) es el lenguaje utilizado para crear, modificar y acceder la información de las bases de datos relacionales.  
 
@@ -76,7 +76,7 @@ Cada registro posee además un identificador único (ID) que llamamos *clave pri
 En cuanto a las relaciones del modelo ER, las tratamos según su tipo:
 
 1. Las relaciones *0 a 1*, *1 a 1*, *0 a n* ó *1 a n*, se traducen por la inclusión de un atributo o columna suplementaria en la tabla hija que contiene la clave primaria del registro padre. A esta columna de la tabla hija, se le llama *clave foránea*
-2. Las relaciones m a n, se traducen por una nueva tabla que contien al menos las claves primarias de las tablas relacionadas
+2. Las relaciones m a n, se traducen en una nueva tabla que contien al menos las claves primarias de las tablas relacionadas
 
 Así, al traducir los ejemplos anteriores, obtenemos los siguientes esquemas a nivel de bases de datos:
 
@@ -97,9 +97,9 @@ Así, al traducir los ejemplos anteriores, obtenemos los siguientes esquemas a n
 
 ## Y en la práctica ¿cómo hacemos?
 
-1. Comienza reflexionando y creando tu modelo entidad-relación. Existen muchas herramientas para eso, como [Lucidchart](https://www.lucidchart.com/pages/) o [ERDPlus](https://erdplus.com/) que te generan las instrucciones SQL necesarias para crear tu base de datos. Incluso pueden conectarse a algunos de los gestores de bases de datos más importantes como MySQL, Oracle, PostgreSQL... para ejecutar las modificaciones de tu esquema o recuperar el esquema existente
+1. Comienza reflexionando y creando tu modelo entidad-relación. Existen muchas herramientas para eso, como <a href="https://www.lucidchart.com/pages/" target="_blank">Lucidchart</a> o <a href="https://erdplus.com/" target="_blank">ERDPlus</a> que te generan las instrucciones SQL necesarias para crear tu base de datos. Incluso pueden conectarse a algunos de los gestores de bases de datos más importantes como MySQL, Oracle, PostgreSQL... para ejecutar las modificaciones de tu esquema o recuperar el esquema existente
 2. Si no tienes un gestor de base de datos, utiliza SQLite, que es liviano y gratuito, ideal para practicar o incluso para utilizar en pequeñas aplicaciones
-3. Utiliza un IDE como [DBeaver](https://dbeaver.io/) para conectarte a tu base de datos existente y recuperar su diagrama, modificar o crear nuevas tables, ejecutar consultas, exportar datos, etc.
+3. Utiliza un IDE como <a href="https://dbeaver.io/" target="_blank">DBeaver</a> para conectarte a tu base de datos existente y recuperar su diagrama, modificar o crear nuevas tables, ejecutar consultas, exportar datos, etc.
 4. Cuando ya domines mejor el SQL, podrás utilizar la consola directamente para manipular tu base de datos
 
 ## Conclusión:
@@ -114,4 +114,4 @@ En el próximo artículo, entraremos de lleno en la escritura de consultas con S
 
 ## Artículos relacionados: 
 
-[¿Cómo hacer consultas con SQL? Parte II: Ejemplos de consultas](/blog/consultas-sql-2)
+[¿Cómo hacer consultas con SQL?](/blog/como-hacer-consultas-sql)
