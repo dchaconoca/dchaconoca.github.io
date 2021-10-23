@@ -83,7 +83,7 @@ export default {
   }
 
   .info {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -121,6 +121,7 @@ export default {
   /* Small devices (landscape phones, 576px and up) */
   @media (min-width: 576px) { 
     .info {
+      position: sticky;
       width: 50vw;
     }
   }

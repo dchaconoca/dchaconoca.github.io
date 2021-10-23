@@ -3,7 +3,7 @@
     <h1>Proyectos y Experiencia Profesional en Desarrollo de Software</h1>
     <div> 
       <p><strong>Consultar otros proyectos, ejercicios y pruebas en mi perfil GitHub:</strong>
-        <a href="https://github.com/dchaconoca" target="_blank" title="Ir a perfil GitHub">
+        <a href="https://github.com/dchaconoca" target="_blank" title="Ir a perfil GitHub: ">
         <i class="fab fa-github-square"></i></a>
       </p>
     </div>
@@ -35,5 +35,9 @@ export default {
 <style scoped>
 
   @import '../assets/css/responsive.css';
+
+  .fab {
+    font-size: 1.5rem;
+  }
 
 </style>
