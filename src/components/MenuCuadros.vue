@@ -54,6 +54,7 @@
 
   .texto-claro {
     /* color: white; */
+    padding: 1%;
     font-size: 0.75rem;
     animation: mostrarTexto 5s ease 3s infinite alternate running backwards;
   }
