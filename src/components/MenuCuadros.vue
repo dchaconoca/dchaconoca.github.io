@@ -32,8 +32,6 @@
 
 <style scoped>
 
-  /* @import "/assets/css/animaciones.css"; */
-
   .menu-cuadros {
     display: grid;
     grid-template-columns: [x0] 1fr [x1] 1fr [x2] 1fr [x3] 1fr [x4] 1fr [x5] 1fr [x6] 1fr [x7] 1fr [x8] 1fr [x9] 1fr [x10];
@@ -44,17 +42,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1%;
+    text-align: center;
     border-radius: 5%;
   }
 
-  /* p {
-    visibility: hidden;
-    animation: mostrarTexto 2s ease 4s infinite alternate running backwards;
-  } */
-
   .texto-claro {
-    /* color: white; */
-    padding: 1%;
+    color: white;
     font-size: 0.75rem;
     animation: mostrarTexto 5s ease 3s infinite alternate running backwards;
   }
