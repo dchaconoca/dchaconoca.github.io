@@ -9,15 +9,15 @@
   },
   {
     "id": "op2",
-    "enlace": { "link": "/proyectos", "texto": "Proyectos" }
+    "enlace": { "link": "/blog", "texto": "Blog"  }
   },
   {
     "id": "op3",
-    "enlace": { "link": "/chez-diana", "texto": "Chez Diana" }
+    "enlace": { "link": "/chez-diana", "texto": "Chez Diana" }  
   },
   {
     "id": "op4",
-    "enlace": { "link": "/blog", "texto": "Blog"  }
+    "enlace": { "link": "/proyectos", "texto": "Proyectos" }
   }
     
 ]

@@ -17,6 +17,15 @@
       return {
         opciones: paramMenu,
       }
+    },
+    events: {
+      eventoAnimacion() {
+        const cuadroAnimado = document.querySelector('.cuadro');
+
+        cuadroAnimado.onanimationend = () => {
+          console.log('Animation ended');
+        };
+      }
     }
   }
 </script>
@@ -38,16 +47,20 @@
     border-radius: 5%;
   }
 
-  p {
+  /* p {
     visibility: hidden;
-  }
+    animation: mostrarTexto 2s ease 4s infinite alternate running backwards;
+  } */
 
   .texto-claro {
-    color: white;
+    /* color: white; */
+    font-size: 0.8rem;
+    animation: mostrarTexto 5s ease 3s infinite alternate running backwards;
   }
 
   .cuadro:hover {
     visibility: hidden; 
+    cursor: context-menu;
     animation-play-state: paused;
   }
 
@@ -109,10 +122,25 @@
   #op1:hover,
   #op2:hover,
   #op3:hover,
-  #op4:hover {
+  #op4:hover,
+  .texto-claro:hover {
+    color: white;
+    opacity: 1;
     animation-play-state: paused;
   }
 
+  /* .texto-claro:hover {
+    color: white;
+    animation-play-state: paused;
+  } */
+
+  @keyframes mostrarTexto {
+    0% { opacity: 0;  }  
+    25% { color: black;  } 
+    50% { opacity: 1; color: white; }  
+    75% { color: black;  } 
+    100% { opacity: 0;  }
+  }
       
   @keyframes moverseOp0 {
     from { transform: scale(0.5);  }  /* Primer fotograma */
