@@ -129,17 +129,12 @@
     animation-play-state: paused;
   }
 
-  /* .texto-claro:hover {
-    color: white;
-    animation-play-state: paused;
-  } */
-
   @keyframes mostrarTexto {
-    0% { opacity: 0;  }  
+    0% { opacity: 0.1;  }  
     25% { color: black;  } 
     50% { opacity: 1; color: white; }  
     75% { color: black;  } 
-    100% { opacity: 0;  }
+    100% { opacity: 0.1;  }
   }
       
   @keyframes moverseOp0 {
