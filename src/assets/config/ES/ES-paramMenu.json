@@ -1,22 +1,27 @@
 [
   {
-    "id": "op0",
+    "id": 0,
+    "cuadro": "op0",
     "enlace": { "link": "/", "texto": "Inicio" } 
   },
   {
-    "id": "op1",
+    "id": 1,
+    "cuadro": "op1",
     "enlace": { "link": "/acerca", "texto": "Sobre mí" }
   },
   {
-    "id": "op2",
+    "id": 2,
+    "cuadro": "op2",
     "enlace": { "link": "/blog", "texto": "Blog"  }
   },
   {
-    "id": "op3",
+    "id": 3,
+    "cuadro": "op3",
     "enlace": { "link": "/chez-diana", "texto": "Chez Diana" }  
   },
   {
-    "id": "op4",
+    "id": 4,
+    "cuadro": "op4",
     "enlace": { "link": "/proyectos", "texto": "Proyectos" }
   }
     

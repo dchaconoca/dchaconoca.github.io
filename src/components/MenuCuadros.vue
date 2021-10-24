@@ -1,8 +1,10 @@
 <template>
   <div class="menu-cuadros">
-    <div v-for="opcion in opciones" :key="opcion.id" :id="opcion.id" class="cuadro" >
+    <div v-for="opcion in opciones" :key="opcion.id" :id="opcion.cuadro" >
       <router-link :to="opcion.enlace.link">
-        <p class="texto-claro">{{ opcion.enlace.texto }}</p>
+        <div :class="opcion.cuadro" class="cuadro">
+          <p class="texto-claro">{{ opcion.enlace.texto }}</p>
+        </div>
       </router-link>
     </div>
   </div>
@@ -47,26 +49,23 @@
     border-radius: 5%;
   }
 
+  .cuadro:hover {
+    cursor: pointer;
+    animation-play-state: paused;
+  }
+
   .texto-claro {
     color: white;
     font-size: 0.75rem;
     animation: mostrarTexto 5s ease 3s infinite alternate running backwards;
-  }
-
-  .cuadro:hover {
-    visibility: hidden; 
-    cursor: context-menu;
-    animation-play-state: paused;
-  }
-
-  .cuadro:hover p {
-    visibility: visible;
-    font-size: 1rem;
-  }
+  } 
 
   #op0 {
     grid-column: x4 / x6;
     grid-row: y3 / y5;
+  }
+
+  .op0 {
     width: 45px;
     height: 45px;
     background-color: white;
@@ -77,6 +76,9 @@
   #op1 {
     grid-column: x2 / x4;
     grid-row: y0 / y2;
+  }
+
+  .op1 {
     width: 50px;
     height: 50px;
     background-color: var(--rojo);
@@ -87,6 +89,9 @@
   #op2 {
     grid-column: x1 / x3;
     grid-row: y5 / y7;
+  }
+
+  .op2 {
     width: 60px;
     height: 60px;
     background-color: var(--amarillo);
@@ -94,9 +99,12 @@
     animation: moverseOp2 2s ease 1s infinite alternate running backwards;
   }
 
-  #op3{
+  #op3 {
     grid-column: x5 / x7;
     grid-row: y6 / y8;
+  }
+
+  .op3 {
     width: 50px;
     height: 50px;
     background-color: var(--verde);
@@ -107,22 +115,16 @@
   #op4 {
     grid-column: x7 / x9;
     grid-row: y1 / y3;
+  }
+
+  .op4 {
     width: 60px;
     height: 60px;
     background-color: var(--azul);
     transform: rotate(-15deg); 
     animation: moverseOp4 2s ease 2s infinite alternate running backwards;
   }
-  
-  #op1:hover,
-  #op2:hover,
-  #op3:hover,
-  #op4:hover,
-  .texto-claro:hover {
-    color: white;
-    opacity: 1;
-    animation-play-state: paused;
-  }
+
 
   @keyframes mostrarTexto {
     0% { opacity: 0.1;  }  

@@ -1,4 +1,5 @@
-# ¿Cómo construir tu base de datos relacional?
+# ¿Cómo construir tu base de datos relacional? 
+###### 20/10/2021
 
 SQL (por sus siglas en inglés Structured Query Language) es el lenguaje utilizado para crear, modificar y acceder la información de las bases de datos relacionales.  
 

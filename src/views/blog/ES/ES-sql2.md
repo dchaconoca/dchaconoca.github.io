@@ -1,4 +1,5 @@
 # ¿Cómo hacer consultas con SQL?
+###### 20/10/2021
 
 Cuando tienes una base de datos relacional y deseas hacer una consulta, debes utilizar la instrucción **SELECT**.
 

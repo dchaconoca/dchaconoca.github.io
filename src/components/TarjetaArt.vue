@@ -9,11 +9,11 @@
         <p class="subtitulo">{{ articulo.texto }}</p>
         <p class="fecha">{{ articulo.fecha }}</p>
       </div>
-      <footer class="tecnos">
+      <div class="tecnos">
         <div v-for="(tecno, index) in articulo.tecnologias" :key="index" class="tecnologia">
           <strong>{{ tecno }}</strong>
         </div>
-      </footer>
+      </div>
     </div>
   </router-link>
 </template>
@@ -61,7 +61,7 @@
     justify-content:flex-end;
     font-size: 0.8rem;
     font-style: bold;
-    margin: 2%;
+    margin-bottom: 1%;
   }
 
   .tecnologia {

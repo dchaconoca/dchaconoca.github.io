@@ -4,7 +4,7 @@
       <div @click="show = true" class="btn-menu" v-if="! show">
         <i class="fas fa-bars"></i>
       </div>
-
+      
       <div @click="show = false" class="btn-menu" v-if="show">
         <i class="fas fa-times"></i>
       </div>
@@ -33,6 +33,7 @@
 <script>
 // @ is an alias to /src
 import PanelInfo from '@/components/PanelInfo.vue'
+// import router from './router'
 
 export default {
   name: 'app',
@@ -43,7 +44,12 @@ export default {
       return {
         show: false
       }
-  }
+  },
+  // watch: {
+  //   // route.afterEach(() => {
+  //   //   console.log("hola")
+  //   // })
+  // }
 }
 </script>
 
@@ -129,7 +135,7 @@ export default {
   /* Medium devices (tablets, 768px and up) */
   @media (min-width: 768px) { 
     .info {
-      width: 30vw;
+      width: 25vw;
     }
   }
 

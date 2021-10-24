@@ -1,4 +1,5 @@
 # Símbolos
+###### 14/04/2021
 
 ### Definición
 - Tipo de dato primitivo como string, number, boolean, null y undefined
