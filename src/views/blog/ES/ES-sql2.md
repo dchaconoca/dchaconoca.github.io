@@ -1,17 +1,17 @@
 # ¿Cómo hacer consultas con SQL?
-###### 20/10/2021
+###### 20/10/2021 - D. Chacón Ocariz
 
 Cuando tienes una base de datos relacional y deseas hacer una consulta, debes utilizar la instrucción **SELECT**.
 
-Una instrucción SELECT en SQL permite extraer datos de una o varias tablas de una base de datos relacional. En vista de que el lenguaje SQL es un lenguaje declarativo, la instrucción SELECT lo que hace es especificar el resultado que queremos obtener, y no la manera cómo lo vamos a obtener. Es el motor de la base de datos el que se encarga de crear el mejor plan de ejecución posible para poder obtener el resultado que le pedimos.
+Una instrucción SELECT en SQL permite extraer datos de una o varias tablas de una base de datos relacional. En vista de que el lenguaje SQL es un lenguaje declarativo, la instrucción SELECT lo que hace es especificar el resultado que queremos obtener, y no la manera como lo vamos a obtener. Es el motor de la base de datos el que se encarga de crear el mejor plan de ejecución posible para poder obtener el resultado que le pedimos.
 
 La instrucción **SELECT** está formada por varias partes o cláusulas, algunas obligatorias y otras opcionales, que deben seguir un orden específico y que responden cada una a una pregunta específica:
 
-1. Las cláusulas **SELECT** y **FROM** son obligatorias. Lo mínimo que necesitas para hacer una consulta es indicar los datos que deseas y en qué tablas se encuentran. En la cláusula FROM especificas también los **JOIN**, es decir, la manera cómo vas a unir las tablas para poder obtener la información que deseas
+1. Las cláusulas **SELECT** y **FROM** son obligatorias. Lo mínimo que necesitas para hacer una consulta es indicar los datos que deseas y en qué tablas se encuentran. En la cláusula FROM especificas también los **JOIN**, es decir, la manera como vas a unir las tablas para poder obtener la información que deseas
 2. La cláusula **WHERE** te permite indicar las condiciones para filtrar los datos de las tablas
 3. En ocasiones necesitas funciones de agregación: **SUM, AVG, COUNT**… para obtener la suma, el promedio, la cantidad de registros, etc. de una columna. La cláusula **GROUP BY** te permite indicar las columnas por las que vas a agrupar los datos para calcular las funciones de agregación. Y la cláusula **HAVING** la puedes comparar con WHERE, pero para aplicar condiciones sobre las columnas calculadas con las funciones de agregación
 4. **ORDER BY** te indica las columnas por las que quieres organizar el resultado. Por defecto el orden es ascendente
-5. Y la cláusula **LIMIT** la puedes utilizar para limitar la cantidad de registros que deseas obtener. Generalmente la utilizas bases de datos con una gran cantidad de registros y no necesitas tenerlos todos
+5. Y la cláusula **LIMIT** la puedes utilizar para limitar la cantidad de registros que deseas obtener. Generalmente la utilizas en bases de datos con una gran cantidad de registros y cuando no necesitas tenerlos todos
 
 En resumen, al construir una consulta SELECT, puedes guiarte por las siguientes preguntas:
 
@@ -32,12 +32,14 @@ Comencemos por hablar del negocio:
 
 Se trata de una base de datos relacional que almacena información sobre bancos, sus clientes y las transacciones que éstos realizan.
 
-Un banco posee n clientes. Un cliente puede realizar varias transacciones en varios bancos. Se trata de una relación “muchos a muchos” que se traduce en 3 tablas a nivel de la base de datos:
+Un banco posee n clientes. Un cliente puede realizar varias transacciones en varios bancos. Se trata de una relación **muchos a muchos** que se traduce en 3 tablas a nivel de la base de datos:
 
 <figure>
     <img class="img-art" src="../../../assets/img/blog/ER-banco.png" alt="Clientes y sus transacciones bancarias">
     <figcaption class="titulo-img">Clientes y sus transacciones bancarias</figcaption>
 </figure>
+
+Según el modelo Entidad - Relación, las entidades principales son *Clients* y *Banks*. Clients *realizan transacciones en* Banks, es la relación que une a estas dos entidades. Esta relación, al ser muchos a muchos, se traduce en una tabla suplementaria en la base de datos, la tabla *Accounts*
 
 Tener conocimiento del esquema de la base de datos, facilita la escritura de las consultas, pues tienes más claro la información que está almacenada, en cuáles tablas debes buscarla, cuál es la relación entre las tablas…  Si no tienes un esquema de tu base de datos, puedes buscar en Google alguna herramienta que te lo genere. 
 
@@ -90,12 +92,14 @@ ORDER BY sum(ac.balance) DESC
 
 ### Ejercicio 3: Bancos con sus clientes y sus taxNumber ordenados por nombre del banco y nombre de los clientes 
 
-En este caso, necesitamos información de las 3 tablas. Utilizamos **DISTINCT**, de lo contrario obtendremos tantas líneas como registros hay en la tabla *Accounts*. Haz la prueba y verás.
+En este caso, necesitamos información de las 3 tablas:
 
 
 - **¿Qué información necesito?** SELECT DISTINCT bk.name, cl.name, cl.taxNumber 
 - **¿En cuál(es) tabla(s) se encuentra?** FROM Banks bk JOIN Accounts ac ON bk.id = ac.bankId JOIN Clients cl ON cl.id = ac.clientId 
 - **¿Cuál será el orden del resultado?**  ORDER BY bk.name, cl.name 
+
+Utilizamos **DISTINCT**, de lo contrario obtendremos tantas líneas como registros hay en la tabla *Accounts*. Haz la prueba y verás.
 
 ```
 SELECT DISTINCT bk.name, 
@@ -112,8 +116,7 @@ ORDER BY bk.name, cl.name
 
 Primero que nada, debemos calcular el saldo total para cada cliente, como lo hicimos en el ejercicio 2. Sin embargo, tenemos una condición sobre ese saldo total, pues queremos sólo aquellos clientes cuyo saldo sea mayor de 25000. Para eso, utilizamos la cláusula **HAVING**. Esta cláusula permite indicar condiciones sobre los campos producto de una función de agregación, en este caso **SUM**.
 
-Para facilitar la consulta, utilizamos directamente el ID del banco Santander (ac.bankId = 1) en la cláusula **WHERE** para indicar que sólo queremos los clientes del banco Santander.
-
+Para facilitar la consulta, utilizamos directamente el identificador (ID) del banco Santander (ac.bankId = 1) en la cláusula **WHERE** para indicar que sólo queremos los clientes del banco Santander.
 
 - **¿Qué información necesito?**  SELECT cl.id, cl.name, sum(ac.balance) 
 - **¿En cuál(es) tabla(s) se encuentra?**  FROM Clients cl JOIN Accounts ac ON cl.id = ac.clientId 
@@ -139,7 +142,7 @@ ORDER BY sum(ac.balance) DESC
 
 ### Ejercicio 5: Bancos con el total de dinero que manejan ordenados crecientemente 
 
-Esta consulta es muy similar a la ya realizada para obtener el saldo total de cada cliente (ejercicio 2, pero en este caso, cambiamos la tabla *Clients* por la tabla *Banks*.
+Esta consulta es muy similar a la ya realizada para obtener el saldo total de cada cliente (ejercicio 2), pero en este caso, cambiamos la tabla *Clients* por la tabla *Banks*.
 
 - **¿Qué información necesito?**  SELECT bk.id, bk.name, sum(ac.balance) 
 - **¿En cuál(es) tabla(s) se encuentra?**  FROM Banks bk JOIN Accounts ac ON bk.id = ac.bankId 
@@ -158,7 +161,7 @@ ORDER BY sum(ac.balance)
 
 ### Ejercicio 6: Bancos y sus clientes con el saldo total de cada uno 
 
-Aquí unimos lo ya realizado en los ejercicios 2 y 5. 
+Aquí unimos lo que ya hicimos en los ejercicios 2 y 5. 
 
 ```
 SELECT bk.name, 
@@ -173,7 +176,7 @@ GROUP BY bk.name, cl.name
 
 ### Ejercicio 7: Bancos con la cantidad de clientes que solo tienen cuenta en ese banco
 
-Para cada banco, contamos la cantidad de clientes distintos que tiene. Excluimos los clientes que tienen cuenta en otro banco (NOT IN subconsulta).
+Para cada banco, contamos la cantidad de clientes distintos que tiene. *Excluimos* los clientes que tienen cuenta en otro banco (NOT IN subconsulta).
 
 ```
 SELECT ac.bankId, 
@@ -186,7 +189,11 @@ WHERE ac.clientId NOT IN
 GROUP BY ac.bankId
 ```
 
-Analicemos la subconsulta: Estamos buscando los clientes que tienen transacciones en otro banco que no sea el banco de la consulta principal, eso es lo que expresamos con la cláusula **WHERE ac.bankId <> ac2.bankId**. Luego, en la consulta principal, excluimos todos los clientes encontrados en la subconsulta.
+Analicemos la consulta: 
+
+1. Tenemos una consulta principal (primer SELECT) y una subconsulta o consulta secundaria (segundo SELECT)
+2. En la subconsulta, buscamos los clientes que tienen transacciones en otro banco que no sea el banco de la consulta principal, eso es lo que expresamos con la cláusula **WHERE ac.bankId <> ac2.bankId**. 
+3. Luego, en la consulta principal, excluimos todos los clientes encontrados en la subconsulta (NOT IN).
 
 Puedes utilizar la siguiente consulta para identificar los clientes que solo tienen una cuenta en un banco:
 
@@ -233,7 +240,9 @@ En este caso, la subconsulta la asimilamos a una tabla, por eso la incluimos en 
 
 #### Solución con una Vista:
 
-Otra solución es crear una **Vista** con la subconsulta y luego utilizarla dentro de la consulta principal.
+Otra solución es crear una **Vista** (CREATE VIEW) con la subconsulta de la solución anterior, y luego utilizarla dentro de la consulta principal.
+
+Las vistas son una especie de tablas virtuales que se crean a partir de una consulta SQL. Tienen la ventaja de facilitar la escritura de consultas complejas, haciéndolas más lisibles, comprensibles y reutilizables en varias consultas.
 
 ```
 CREATE VIEW TotalBalanceBankClient AS
@@ -251,8 +260,6 @@ JOIN Clients cl ON tb.clientId = cl.id
 GROUP BY tb.bankId 
 ```
 
-Las vistas son una especie de tablas virtuales que se crean a partir de una consulta SQL. Tienen la ventaja de facilitar la escritura de consultas complejas, haciéndolas más lisibles, comprensibles y reutilizables en varias consultas.
-
 **¿Cuál de las 2 soluciones te parece más sencilla de realizar / comprender?**
 
 
@@ -260,7 +267,7 @@ Las vistas son una especie de tablas virtuales que se crean a partir de una cons
 
 El SQL es un lenguaje declarativo, es decir, lo que hacemos es indicar el resultado que queremos obtener, luego el motor de la base de datos es el encargado de "decidir" cómo hacer la ejecución.
 
-Conocer el esquema de una base de datos, te facilita la realización de consultas, ya que tienes má claro la información que tienes y en qué tabla se encuentra.
+Conocer el esquema de una base de datos te facilita la realización de consultas, ya que tienes más claro que información tienes y en qué tabla se encuentra.
 
 Aquí presentamos solo unos cuantos ejercicios, queda de tu parte seguir practicando y estudiando este maravilloso lenguaje. Aquí te dejo algunos cursos:
 

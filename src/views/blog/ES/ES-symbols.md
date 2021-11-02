@@ -1,5 +1,5 @@
-# Símbolos
-###### 14/04/2021
+# Symbol en Javascript
+###### 14/04/2021 - D. Chacón Ocariz
 
 ### Definición
 - Tipo de dato primitivo como string, number, boolean, null y undefined

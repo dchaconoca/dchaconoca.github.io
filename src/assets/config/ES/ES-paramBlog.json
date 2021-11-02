@@ -20,12 +20,12 @@
     "tecnologias": ["SQL"]
   },
   {
-    "id": "symbols-javascript",
+    "id": "symbol-javascript",
     "imagen": "blog/javascript.png",
-    "txtImg": "Symbols en Javascript",
+    "txtImg": "Symbol en Javascript",
     "enlace": "/blog/",
-    "titulo": "Symbols en Javascript", 
-    "texto": "Qué son y para qué se usan",
+    "titulo": "Symbol en Javascript", 
+    "texto": "Qué son los símbolos (Symbol) en Javascript y para qué se usan",
     "fecha": "14/04/2021",
     "tecnologias": ["Javascript"]
   }    

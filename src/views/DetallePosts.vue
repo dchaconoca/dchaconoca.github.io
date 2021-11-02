@@ -22,7 +22,7 @@ export default {
     let recursos = {
       'como-construir-modelo-er': ESsql1,
       'como-hacer-consultas-sql': ESsql2,
-      'symbols-javascript': ESsymbols,
+      'symbol-javascript': ESsymbols,
     }
 
     this.markdown = recursos[this.$route.params.id];
