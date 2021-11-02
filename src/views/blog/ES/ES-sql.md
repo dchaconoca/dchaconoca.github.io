@@ -43,7 +43,7 @@ Lo que hace única una entidad son los valores específicos de sus atributos, po
 
 Algunos ejemplos de modelos ER y su representación gráfica:
 
-1. Una *Persona* *vive en* una *Casa*. Persona y Casa son **entidades**. Vive en es la **relación** que las une: 
+1. Una *Casa* *es habitada* por una o varias *Personas*. Persona y Casa son **entidades**. *Es habitada* es la **relación** que las une: 
 
 <figure>
     <img class="img-art" src="../../../assets/img/blog/ER-casa.png" alt="Modelo ER Persona - Casa">
