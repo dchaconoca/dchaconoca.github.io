@@ -108,9 +108,9 @@ En el tercer caso, al tratarse de una relación *muchos a muchos*, la relación 
 
 ## Y en la práctica ¿cómo hacemos?
 
-1. Comienza reflexionando y creando tu modelo entidad-relación. Existen muchas herramientas que te pueden ayudar, como <a href=*https://www.lucidchart.com/pages/* target=*_blank*>Lucidchart</a> o <a href=*https://erdplus.com/* target=*_blank*>ERDPlus</a> que oncluso pueden generar las instrucciones SQL necesarias para crear tu base de datos. Te permiten conectarte a algunos de los gestores de bases de datos más importantes como MySQL, Oracle, PostgreSQL... para ejecutar las modificaciones de tu esquema o recuperar el esquema existente
+1. Comienza reflexionando y creando tu modelo entidad-relación. Existen muchas herramientas que te pueden ayudar, como <a href="https://www.lucidchart.com/pages/" target="_blank">Lucidchart</a> o <a href="https://erdplus.com/" target="_blank">ERDPlus</a> que oncluso pueden generar las instrucciones SQL necesarias para crear tu base de datos. Te permiten conectarte a algunos de los gestores de bases de datos más importantes como MySQL, Oracle, PostgreSQL... para ejecutar las modificaciones de tu esquema o recuperar el esquema existente
 2. Si no tienes un gestor de base de datos, utiliza SQLite, que es liviano y gratuito, ideal para practicar o incluso para utilizar en pequeñas aplicaciones
-3. Utiliza un IDE como <a href=*https://dbeaver.io/* target=*_blank*>DBeaver</a> para conectarte a tu base de datos existente y recuperar su diagrama, modificar o crear nuevas tables, ejecutar consultas, importar y exportar datos, etc.
+3. Utiliza un IDE como <a href="https://dbeaver.io/" target="_blank">DBeaver</a> para conectarte a tu base de datos existente y recuperar su diagrama, modificar o crear nuevas tables, ejecutar consultas, importar y exportar datos, etc.
 4. Cuando ya domines mejor el SQL, podrás utilizar la consola directamente para manipular tu base de datos
 
 ## Conclusión:
