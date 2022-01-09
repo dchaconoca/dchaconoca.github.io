@@ -1,5 +1,5 @@
 # ¿Cómo hacer consultas con SQL?
-###### 20/10/2021 - D. Chacón Ocariz
+###### Actualización 09/01/2022 - D. Chacón Ocariz
 
 Cuando tienes una base de datos relacional y deseas hacer una consulta, debes utilizar la instrucción **SELECT**.
 
@@ -287,6 +287,7 @@ GROUP BY tb.bankId
 La ventaja de las vistas sobre las CTE es que son elementos que existen dentro de la base de datos y pueden ser utilizdas en diferentes instrucciones. 
 
 **¿Cuál de las 3 soluciones te parece más sencilla de realizar / comprender?**
+
 
 
 ## Conclusión:
