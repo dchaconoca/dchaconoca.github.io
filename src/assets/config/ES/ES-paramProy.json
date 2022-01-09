@@ -1,5 +1,15 @@
 [
   {
+    "id": "restaurantes",
+    "imagen": "proyectos/rest.png",
+    "txtImg": "¿Dónde es más barato ir al restaurant?",
+    "enlace": "/proyectos/",
+    "titulo": "¿Dónde es más barato ir al restaurant?", 
+    "texto": "Ejercicio de Web Scraper con BeautifulSoup y Análisis de los Datos",
+    "fecha": "Año 2022",
+    "tecnologias": ["BeautifulSoup", "Pandas", "Seaborn"]
+  },
+  {
     "id": "website",
     "imagen": "proyectos/site.png",
     "txtImg": "Web Diana Chacón Ocariz",
