@@ -6,20 +6,20 @@
 </figure>
 
 <div class="link-gh">
-    <strong>Ver código aquí:</strong>
-    <a href="https://github.com/dchaconoca/web-scraping-precios" target="_blank" title="Ir a proyecto en GitHub"><i class="fab fa-github-square"></i></a>
+    <strong>Ver código Notebook:</strong>
+    <a href="https://github.com/dchaconoca/Scraper-restaurantes" target="_blank" title="Ir a proyecto en GitHub"><i class="fab fa-github-square"></i></a>
 </div>
 <br>
-Uno de los principales problemas de la aplicación de Recetas, es la actulización de precios de los ingredientes.
 
+La página [PreciosMundi](https://preciosmundi.com/) posee información general y económica de una gran cantidad de países agrupados por continentes, principalemente precios de productos. 
 
-Varias ideas pueden ser implementadas. Ésta es una de ellas.
+El objetivo es extraer información general sobre los países así como los precios de referencia de algunos productos en restaurantes para los países de América. 
 
-Utilización de la librería de *Python* *BeautifulSoup* para hacer un scraping de una página de precios de alimentos y generar un archivo JSON con la información.
+También muestra un análisis con *Pandas* y *Seaborn* para determinar en qué país es más barato ir al restaurant.
 
-Estos datos podrán ser luego integrados a la aplicación de Recetas.
+## Librerías utilizadas:
 
-## Tecnologías utilizadas:
-
-- *Python: BeautifulSoup*
+- *BeautifulSoup*
+- *Pandas*
+- *Seaborn*
   
