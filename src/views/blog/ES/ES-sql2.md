@@ -212,7 +212,7 @@ GROUP BY ac.bankId
 
 Esta consulta debemos hacerla en 2 partes: Una que nos devuelve el saldo total para cada cliente en cada banco y otra parte que selecciona el cliente con el saldo más pequeño.
 
-Aquí te presento 2 soluciones:
+Aquí te presento 3 soluciones:
 
 #### Solución con una subconsulta:
 
@@ -238,9 +238,33 @@ GROUP BY bankId
 
 En este caso, la subconsulta la asimilamos a una tabla, por eso la incluimos en un JOIN.
 
+Esta solución no es la más óptima, ya que el código es más difícil de comprender. 
+
+#### Solución con una CTE: 
+
+Las **Common Table Expression (CTE)** o **Expresiones Comunes de Tabla** permiten definir una consulta que luego podrá ser utilizada dentro de otra instrucción. Facilitan la escritura de consultas complejas y son temporales.
+
+
+```
+WITH TotalBalanceBankClient AS
+( SELECT ac.bankId AS bankId, 
+    ac.clientId AS clientId,
+    sum(ac.balance) AS total
+  FROM Accounts ac
+  GROUP BY ac.bankId, ac.clientId)
+
+SELECT bk.name, cl.name, min(tb.total)
+FROM Banks bk JOIN TotalBalanceBankClient tb 
+  ON bk.id = tb.bankId 
+JOIN Clients cl ON tb.clientId = cl.id
+GROUP BY tb.bankId 
+```
+
+Las CTE son sin duda una mejor solución que la utilización de subconsultas, no solo porque facilitan la lectura y comprensión de consultas complejas, también tienen un mejor performance en caso de que una misma consulta se utilice varias veces en un mismo bloque.
+
 #### Solución con una Vista:
 
-Otra solución es crear una **Vista** (CREATE VIEW) con la subconsulta de la solución anterior, y luego utilizarla dentro de la consulta principal.
+Otra solución es crear una **Vista** (CREATE VIEW) con la subconsulta de la solución y luego utilizarla dentro de la consulta principal.
 
 Las vistas son una especie de tablas virtuales que se crean a partir de una consulta SQL. Tienen la ventaja de facilitar la escritura de consultas complejas, haciéndolas más lisibles, comprensibles y reutilizables en varias consultas.
 
@@ -260,7 +284,9 @@ JOIN Clients cl ON tb.clientId = cl.id
 GROUP BY tb.bankId 
 ```
 
-**¿Cuál de las 2 soluciones te parece más sencilla de realizar / comprender?**
+La ventaja de las vistas sobre las CTE es que son elementos que existen dentro de la base de datos y pueden ser utilizdas en diferentes instrucciones. 
+
+**¿Cuál de las 3 soluciones te parece más sencilla de realizar / comprender?**
 
 
 ## Conclusión:
