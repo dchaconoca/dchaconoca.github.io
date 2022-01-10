@@ -1,4 +1,4 @@
-# Scraping de una página de precios
+# ¿Dónde es más barato ir al restaurant?
 
 <figure>
     <img class="img-art" src="../../../assets/img/proyectos/rest.png" alt="Gráfico en Altair">
