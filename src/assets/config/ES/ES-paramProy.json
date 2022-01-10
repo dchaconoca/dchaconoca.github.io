@@ -7,7 +7,7 @@
     "titulo": "¿Dónde es más barato ir al restaurant?", 
     "texto": "Ejercicio de Web Scraper con BeautifulSoup y Análisis de los Datos",
     "fecha": "Año 2022",
-    "tecnologias": ["BeautifulSoup", "Pandas", "Seaborn"]
+    "tecnologias": ["BeautifulSoup", "Pandas", "Altair"]
   },
   {
     "id": "website",
