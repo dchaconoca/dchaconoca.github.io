@@ -36,7 +36,7 @@ export default {
 
   @import '../assets/css/responsive.css';
 
-  .fab {
+  .fab, .fas {
     font-size: 1.5rem;
   }
 

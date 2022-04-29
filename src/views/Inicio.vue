@@ -5,16 +5,17 @@
     </div>
     <h1>Diana Chacón Ocariz</h1>
     <div class="textos">
-      <h2>Estudiante de Ciencia de Datos</h2>
-      <h2>Desarrollo de software</h2>
-      <h3>Python - SQL - Javascript - HTML/CSS</h3>
+      <h2>Hago muchas cosas</h2>
+      <h3>Análisis y Ciencia de Datos</h3>
+      <h3>Management, Desarrollo de software y Marketing</h3>
+      <h3>Cocina de vez en cuando...</h3>
+      <h3>¡Y lo que falta!</h3>
     </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-// import inicio from "@/assets/language/ES/ES-inicio.md";
 import MenuCuadros from '@/components/MenuCuadros.vue';
 
 export default {
@@ -42,7 +43,7 @@ export default {
   }
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: white;
   }
 
@@ -61,7 +62,7 @@ export default {
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
 
     h2 {

@@ -1,5 +1,15 @@
 [
   {
+    "id": "ventas",
+    "imagen": "proyectos/ventas.jpg",
+    "txtImg": "Análisis de las Ventas de una Ferretería",
+    "enlace": "/proyectos/",
+    "titulo": "Análisis de las Ventas de una Ferretería", 
+    "texto": "Proyecto para el Bootcamp de Ciencia de Datos",
+    "fecha": "Año 2022",
+    "tecnologias": ["Pandas", "Google Data Studio", "Altair"]
+  },
+  {
     "id": "restaurantes",
     "imagen": "proyectos/rest.png",
     "txtImg": "¿Dónde es más barato ir al restaurant?",

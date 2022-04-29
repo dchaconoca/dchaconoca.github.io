@@ -7,6 +7,7 @@
 <script>
 // @ is an alias to /src
 import marked from "marked";
+import ESventas from "/src/views/proyectos/ES/ES-analisis-ventas.md";
 import ESrestau from "/src/views/proyectos/ES/ES-restaurantes.md";
 import ESwebsite from "/src/views/proyectos/ES/ES-website.md";
 import ESreceta from "/src/views/proyectos/ES/ES-recetas.md";
@@ -27,6 +28,7 @@ export default {
       'manapro': ESmanapro,
       'recetas': ESreceta,
       'restaurantes': ESrestau,
+      'ventas': ESventas,
       'web-scraper': ESscraper,
       'website': ESwebsite,
     }
