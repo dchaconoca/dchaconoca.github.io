@@ -12,7 +12,7 @@ npm run build
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
 git add -A
-git commit -m 'Cambio CV'
+git commit -m 'Cambio CV Teamitfy'
 
 # if you are deploying to https://<USERNAME>.github.io
 git push -f origin master
