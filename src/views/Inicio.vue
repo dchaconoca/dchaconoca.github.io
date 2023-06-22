@@ -6,9 +6,10 @@
     <h1>Diana Chacón Ocariz</h1>
     <div class="textos">
       <h2>Hago muchas cosas</h2>
+      <h3>Project Management - Desarrollo de software</h3>
       <h3>Análisis y Ciencia de Datos</h3>
-      <h3>Management, Desarrollo de software y Marketing</h3>
-      <h3>Cocina de vez en cuando...</h3>
+      <h3>Estrategias de Marketing Digital</h3>
+      <h3>Cocino de vez en cuando...</h3>
       <h3>¡Y lo que falta!</h3>
     </div>
   </div>

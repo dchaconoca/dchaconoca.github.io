@@ -9,7 +9,7 @@
       Siempre me ha gustado lo que se siente cuando logras que una computadora haga lo que quieres que haga. Por eso decidí estudiar Informática. Pero también vengo de una familia que le gusta cocinar y cuya vida, más allá de profesiones y quehaceres, gira al rededor de la cocina.
     </p>
     <p>
-      Durante 10 años ejercí mi carrera, una parte en Caracas (Venezuela) y otra en París (Francia).  Pero siempre decía que quería montar mi propio restaurant.
+      Durante 10 años ejercí mi carrera en informática, una parte en Caracas (Venezuela) y otra en París (Francia).  Pero siempre decía que quería montar mi propio restaurant.
     </p>
     <p>
     Y entre la rutina, los largos trayectos a la oficina y quizás también la crisis de los 30, me llevaron a hacer un gran cambio en mi vida: Renuncié a mi trabajo y regresé a mi pueblo en Los Andes venezolanos a… ¡Montar mi propio restaurant!
@@ -18,13 +18,13 @@
       El <a href="/chez-diana">Chez Diana</a> (En la casa de Diana) nació en el 2009, y durante 9 años fue para mí una gran escuela de <strong>emprendimiento</strong>, <strong>organización</strong>, <strong>gerencia</strong>, <strong>atención al público</strong> y por supuesto de cocina. Además de haber sido una fuente inagotable de satisfacción: Nada como hacer a la gente feliz con lo que haces…
     </p>
     <p>
-      Pero <strong>me gusta cambiar</strong> y pienso que en la vida, es posible hacer muchas cosas. En el 2017 comencé a interesarme por las redes sociales y el <strong>Marketing Digital</strong>. A partir del 2018, he estado dedicada a ese mundo. Me gusta analizar negocios, pensar en estrategias, analizar resultados. También fue una manera de acercarme poco a poco de nuevo a la informática. 
+      Pero <strong>me gusta cambiar</strong> y pienso que en la vida, es posible hacer muchas cosas. En el 2017 comencé a interesarme por las redes sociales y el <strong>Marketing Digital</strong>. En el 2018, comencé a trabajar en esto. Me gusta analizar negocios, pensar en estrategias, analizar resultados. También fue una manera de acercarme poco a poco de nuevo a la tecnología. 
     </p>
     <p>
-      Por eso, en el 2020 decidí <strong>aprender</strong> <strong>Python</strong>. Luego se hicieron necesario el <strong>HTML</strong> y el <strong>CSS</strong>. Y el inconturnable <strong>Javascript</strong>. Y repasar <strong>SQL</strong>, aprender nuevos conceptos y frameworks...  Luego de más de 10 años “desconectada” del mundo dev, las cosas han cambiado tanto, que no solo ha sido redescubrir la informática, sino aprender un montón de cosas nuevas y… Sí, hoy es aún más fascinante.
+      Por eso, en el 2020 decidí <strong>aprender</strong> <strong>Python</strong>. Luego se hicieron necesario el <strong>HTML</strong> y el <strong>CSS</strong>. Y el inconturnable <strong>Javascript</strong>. Y repasar <strong>SQL</strong>, aprender nuevos conceptos y frameworks...  Luego de más de 10 años “desconectada” del mundo IT, las cosas han cambiado tanto, que no solo ha sido redescubrir la informática, sino aprender un montón de cosas nuevas y… Sí, hoy es aún más fascinante.
     </p>
     <p>
-      Hoy tengo claro que quiero dedicarme de nuevo al desarrollo de software, y en un futuro no muy lejano, me gustaría orientarme hacia la Ciencia de Datos (estudio para eso jejeje). 
+      Desde el 2022, estoy trabajando como <strong>Project Manager</strong>, liderando equipos de desarrollo de software. También sigo estudiando y <strong>aprendiendo sobre Ciencia de Datos</strong>, y espero en un futuro no muy lejano, dedicarme a este campo.
     </p>
     <p>
       Mientras tanto, sigo aquí, en medio de mis montañas, con mis gatos y mis matas, tratando siempre de que las computadoras hagan, lo que quiero que hagan.
